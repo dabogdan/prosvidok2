@@ -1,110 +1,12 @@
 /*All animations*/
 
-
-/*typing aniation*/
-
-.wrapper {
-  height: 10vh;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-/*.typing-demo {
-  width: 45ch;
-  animation: typing 2s steps(35), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-size: 2em;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}*/
-
-/*button shine animation*/
-/*
-.btn-shine {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 12px 48px;
-  color: #fff;
-  background: linear-gradient(to right, #999 0, #fff 5%, #999 20%);
-  background-position: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2s infinite linear;
-  animation-fill-mode: forwards;
-  -webkit-text-size-adjust: none;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-@-moz-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 500px;
-  }
-  100% {
-    background-position: 900px;
-  }
-}
-@-webkit-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 500px;
-  }
-  100% {
-    background-position: 900px;
-  }
-}
-@-o-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 500px;
-  }
-  100% {
-    background-position: 900px;
-  }
-}
-@keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 500px;
-  }
-  100% {
-    background-position: 900px;
-  }
-}*/
-
-
 /*scroll down*/
-
 
 .arrow {
   text-align: center;
-  margin-top: 5rem;
-  padding-bottom: 10%;
+  margin-top: 3rem;
+  margin-bottom: 15px
+  padding-bottom: 20%;
 }
 .bounce {
   -moz-animation: bounce 2s infinite;
