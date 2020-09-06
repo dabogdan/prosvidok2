@@ -2,7 +2,8 @@
 
 .mobar {
   background-color: inherit;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+          box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: relative;
   width: 100%;
   z-index: 8;
@@ -44,6 +45,7 @@
 .mobmenu {
   clear: both;
   max-height: 0;
+  -webkit-transition: max-height .2s ease-out;
   transition: max-height .2s ease-out;
   display: none;
 }
@@ -56,7 +58,10 @@
   float: right;
   padding: 28px 20px;
   position: relative;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .mobar .mobmenu-icon .navicon {
@@ -64,6 +69,7 @@
   display: block;
   height: 2px;
   position: relative;
+  -webkit-transition: background .2s ease-out;
   transition: background .2s ease-out;
   width: 18px;
 }
@@ -75,6 +81,7 @@
   display: block;
   height: 100%;
   position: absolute;
+  -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
   width: 100%;
 }
@@ -102,11 +109,15 @@
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon .navicon:before {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon .navicon:after {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon:not(.steps) .navicon:before,
