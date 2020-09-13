@@ -142,12 +142,12 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .mobmenu-wrapper{
-        background: #414141;
-        height: 55px;
-        line-height: 55px;
-        width: 100%;
-    }
+  .mobmenu-wrapper{
+      background: #414141;
+      height: 55px;
+      line-height: 55px;
+      width: 100%;
+  }
   .mobar li {
     float: right;
   }
@@ -164,7 +164,4 @@
     float: right;
     max-height: none;
   }
-  /*.mobar .mobmenu-icon {
-    display: block;
-  }*/
 }

@@ -12,7 +12,6 @@
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<style> { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
-
 </head>
 
 <body>
@@ -36,9 +35,9 @@
 				<ul>
 					<li><a href="index.html" class="nav-link">Home</a></li>
 					<li><a href="witness-advice.html" class="nav-link">Advice</a></li>
-					<li><a href="#" class="nav-link">In Court</a></li>
+					<li><a href="in-court.html" class="nav-link">In Court</a></li>
 					<li><a href="#" class="nav-link">Courtrooms</a></li>
-					<li><a href="#" class="nav-link">Victims</a></li>
+					<li><a href="javascript:scrollVictims()" class="nav-link">Victims</a></li>
 				</ul>
 			</div> <!--/.menu -->
 
@@ -61,9 +60,9 @@
                 <ul class="mobmenu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="witness-advice.html">Advice</a></li>
-                    <li><a href="#careers">In Court</a></li>
+                    <li><a href="in-court.html">In Court</a></li>
                     <li><a href="#contact">Courtrooms</a></li>
-                    <li><a href="#contact">Victims</a></li>
+                    <li><a href="javascript:scrollVictims()">Victims</a></li>
                 </ul>
 			</div>
 <!--./mobile menu  -->
@@ -82,7 +81,7 @@
 				<a href="#" class="button button-gray">Download a leaflet</a>
 				<!-- </div> -->
 				<div class="arrow bounce">
-					<a class="fa fa-arrow-down fa-2x" href="#"></a>
+					<a class="fa fa-arrow-down fa-2x" href="javascript:scrollArrow()"></a>
 				</div>
 				<!-- </div> -->
 			</div>
@@ -90,7 +89,7 @@
 
 <!-- welcome section -->
 
-	<section class="section-welcome landing-section">
+	<section class="section-welcome landing-section" id="welcome">
 		<div class="container grid">
 			<div class="welcome-left">
 				<h2>Welcome to the <br> Witness Support website!</h2>
@@ -103,7 +102,7 @@
 				<!-- <img class="img-responsive" src="img/example.jpg" alt="Example"> -->
 				<p>Thousands of witnesses and victims of crimes give testimony in courts during criminal procedure each year. However, many witnesses do this for the first time in their life. Therefore, they may not be so well informed about their important role.</p>
 				<p>This website is supported by the <a href="http://www.euam-ukraine.eu/" target="_blank" rel="noopener noreferrer">European Union Advisory Mission in Ukraine</a> (EUAM) to increase witnesses’ awareness of their responsibilities during criminal proceedings and make the experience of appearing before a court less stressful.</p>
-				<p>It is important to note that witness support should not be confused with witness protection. The latter is available only to witnesses who feel intimidated or threatened. To find out more please see the section “<a href="https://prosvidok.info/en/witness-protection/" target="_blank" rel="noopener noreferrer"><u>Witness Protection</u></a>“.</p>
+				<p>It is important to note that witness support should not be confused with witness protection. The latter is available only to witnesses who feel intimidated or threatened. To find out more please see the section “<a href="https://prosvidok.info/en/witness-protection/" target="_blank" rel="noopener noreferrer">Witness Protection</a>“.</p>
 				<p>The information on this website is accurate according to the law as it stands at 1 February 2019.</p>
 			</div>
 		</div>
@@ -174,23 +173,6 @@
     </section>
 
 
-<!--alternative links section -->
-<!-- 	<section class="links-section grid">
-		 <div class="links-item grid" style="background-image: url(img/court_1.jpeg)"><span>Pictures of the Courtroom in Lviv city</span></div>
-		 <div class="links-item grid" style="background-image: url(img/male_judge_2.jpg)"><span>Read General Advice for Witnesses</span></div>
-		 <div class="links-item grid" style="background-image: url(img/court_3.jpeg)"><span>What to Do in the Court</span></div>
-		 <div class="links-item grid" style="background-image: url(img/protection.jpg)"><span>Witness Protection</span></div>
-		 <div class="links-item grid" style="background-image: url(img/compensation.jpg)"><span>How to get compensated</span></div>
-		 <div class="links-item grid" style="background-image: url(img/clinic.jpg)"><span>Contact Free Partner Legal Clinic</span></div>
-		 <div class="links-item grid" style="background-image: url(img/crime.jpg)"><span>Information about crime</span></div>
-		 <div class="links-item grid" style="background-image: url(img/flac.jpg)"><span>Link to the Free Legal Aid Centre</span></div>
-		 <div class="links-item grid" style="background-image: url(img/Halyna.png)"><span>About the Witness Support Pilot Project</span></div> -->
-<!-- 
-		 <div class="buttoncase text-center">
-		 	<a href="" class="button">View Portfolio</a>
-		 </div> -->
-	</section>
-
 
 <!-- pilot section -->
 	<section class="landing-section section-blog">
@@ -246,9 +228,9 @@
 
 <!-- victim section -->
 
-	<section class="section-welcome landing-section">
+	<section class="section-welcome landing-section"  id="victims">
 		<div class="container grid">
-			<div class="welcome-left">
+			<div class="welcome-left victims">
 				<h2>
 					Information for victims <br> in criminal proceedings
 				</h2>
@@ -322,6 +304,7 @@
 	<script src="js/script.js"></script>
 	<link rel="stylesheet" href="css/animation.css">
 	<link rel="stylesheet" href="css/mob_menu.css">
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 
 	<!-- icon fonts -->
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
@@ -332,6 +315,8 @@
 	<script src="js/slick.js"></script>
 	<link rel="stylesheet" href="css/iso_bootstrap4.1.0min.css">
 	<script src="js/slider.js"></script>
+	<!-- scroll js -->
+	<script src="js/scroll.js"></script>
 
 </body>
 </html>

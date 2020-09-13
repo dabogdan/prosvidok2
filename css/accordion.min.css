@@ -18,8 +18,7 @@
   text-align: justify;
 }
 
-details {
-/*  border-color: #878d99;*/  
+details {  
   color: rgba(255, 255, 255, 0.9);
   background: #878d99;
   border: 1px solid;
@@ -79,7 +78,6 @@ details.primary:active {
   border-color: #5981d2;
 }
 details.success {
-  /*border-color: #878d99;*/
   color: rgba(255, 255, 255, 0.9);
   background: #878d99;
 }
@@ -94,7 +92,6 @@ details.success:active {
 }
 
 details.yellow {
-  /*border-color: #5981d2;*/
   color: rgba(255, 255, 255, 0.9);
   background: #5981d2;
 }
@@ -128,12 +125,6 @@ summary {
   padding: 13px;
 }
 
-@media screen and (max-width: 768px) {
-  summary{
-    font-size: 15px;
-  }
-}
-
 summary:selection {
   background: transparent;
   display: none;
@@ -164,4 +155,22 @@ summary:after {
 [open] summary:after {
   padding: 0 0 12px 0;
   content: "➖";
+}
+
+@media screen and (max-width: 768px) {
+  summary{
+    font-size: 13px;
+  }
+  summary:after{
+    margin-top: 2px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  summary{
+    font-size: 10.5px;
+  }
+  summary:after{
+    margin-top: 0;
+  }
 }
