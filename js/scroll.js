@@ -1,6 +1,6 @@
 // scroll js function
 
-const scrollTo = (element) => {
+scrollTo = (element) => {
   window.scroll({
     behavior: 'smooth',
     top: element.offsetTop - navbarHeight
@@ -13,11 +13,11 @@ let welcome = document.getElementById('welcome');
 
 let victims = document.getElementById("victims");
 
-const scrollArrow = () => {
+scrollArrow = () => {
 	scrollTo(welcome);
 };
 
 scrollVictims = () => {
 	scrollTo(victims);	
-	document.getElementById("mobmenu-btn").checked = false;
+	mobMenuUncheck();
 }
