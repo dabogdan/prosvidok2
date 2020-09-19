@@ -167,3 +167,38 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+/*scroll up button*/
+
+.scrollTop {
+    display: none;
+    position: fixed;
+    color: #fff;
+    background: #555;
+    border-radius: 50%;
+    opacity: .7;
+    bottom: 1em;
+    right: 1em;
+    padding: 12px 13px 0 13px;
+    font-family: monospace;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: .5s;
+    line-height: 1.15;
+    z-index: 12;
+}
+.scrollTop:hover {
+    background: #333;
+    opacity: .95;
+    transition: .5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
