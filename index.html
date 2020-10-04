@@ -10,12 +10,10 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<style> { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
 </head>
 
 <body>
-
 
 <!-- scroll to the Top button -->
 
@@ -41,7 +39,7 @@
 					<li><a href="witness-advice.html" class="nav-link">Advice</a></li>
 					<li><a href="in-court.html" class="nav-link">In Court</a></li>
 					<li><a href="courtrooms.html" class="nav-link">Courtrooms</a></li>
-					<li><a href="#vistims" class="nav-link victims-link" onclick="mobMenuUncheck();">Victims</a></li>
+					<li><a href="#victims" class="nav-link victims-link" onclick="mobMenuUncheck();">Victims</a></li>
 				</ul>
 			</div> <!--/.menu -->
 
@@ -76,10 +74,10 @@
 <!-- main header -->
 	<header class="main-header grid" style="background-image: url(img/shev_court_bench.jpeg);" onclick="mobMenuUncheck();">
 			<div class="header-content">
-				
-					
+
+
 				<h1>Welcome to the Witness Support website.</h1>
-				
+
 				<!-- <div class="header-buttons"> -->
 					<!-- <a href="#" class="button">Follow</a> -->
 				<!-- <a href="#" class="button button-gray">Download a leaflet</a> -->
@@ -100,7 +98,7 @@
 				<p>Everyone can become a witness. Witnesses play a very important function in criminal proceedings. Their statements help courts establish the facts and thus contribute to justice being served.</p>
 				<p>The question of whether someone is guilty or innocent can depend to a great extent on the testimony of witnesses. Therefore, they constitute an integral part of the criminal justice system.</p>
 				<p>Witnessing a crime can have a traumatizing impact on an individual. The provision of a witness statement greatly helps the healing and closure process of an affected person.</p>
-				
+
 			</div>
 			<div class="welcome-right">
 				<!-- <img class="img-responsive" src="img/example.jpg" alt="Example"> -->
@@ -127,7 +125,7 @@
 	        			<div class="icon d-flex justify-content-center align-items-center">
 	        				<span class="flaticon-handcuffs"></span>
 	        			</div>
-	        			<h3><a href="#">Crime info</a></h3>
+	        			<h3><a href="#crime-info" class="crime-info">Crime info</a></h3>
 	        		</div>
 	        	</div>
 	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -135,7 +133,7 @@
 	        			<div class="icon d-flex justify-content-center align-items-center">
 	        				<span class="flaticon-auction"></span>
 	        			</div>
-	        			<h3><a href="#">Going to the court</a></h3>
+	        			<h3><a href="in-court.html#trial-day">Going to the court</a></h3>
 	        		</div>
 	        	</div>
 	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -143,16 +141,15 @@
 	        			<div class="icon d-flex justify-content-center align-items-center">
 	        				<span class="flaticon-shield"></span>
 	        			</div>
-	        			<h3><a href="#">Witness protection</a></h3>
+	        			<h3><a href="witness-advice.html#protection">Witness protection</a></h3>
 	        		</div>
 	        	</div>
-
 	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
 	        		<div class="practice-area ftco-animate">
 	        			<div class="icon d-flex justify-content-center align-items-center">
 	        				<span class="flaticon-employee"></span>
 	        			</div>
-	        			<h3><a href="#">Witness advice</a></h3>
+	        			<h3><a href="witness-advice.html#rights-obligations">Witness advice</a></h3>
 	        		</div>
 	        	</div>
 	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -160,7 +157,7 @@
 	        			<div class="icon d-flex justify-content-center align-items-center">
 	        				<span class="flaticon-money"></span>
 	        			</div>
-	        			<h3><a href="#">How to get compansated</a></h3>
+	        			<h3><a href="witness-advice.html#compensation">How to get compansated</a></h3>
 	        		</div>
 	        	</div>
 	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -168,7 +165,7 @@
 	        			<div class="icon d-flex justify-content-center align-items-center">
 	        				<span class="flaticon-lawyer"></span>
 	        			</div>
-	        			<h3><a href="#">Free Legal Aid</a></h3>
+	        			<h3><a href="witness-advice.html#free-legal-aid">Free Legal Aid</a></h3>
 	        		</div>
 	        	</div>
 
@@ -196,7 +193,7 @@
 
 
 <!-- crime section -->
-	<section class="landing-section section-blog crime" onclick="mobMenuUncheck();">
+	<section id='crime-info' class="landing-section section-blog crime" onclick="mobMenuUncheck();">
 		<div class="container">
 			<h2>Crime Information <br> What to do if you have witnessed a crime?</h2>
 			<div class="blog-home grid">
@@ -229,10 +226,8 @@
 		</div>
 	</section>
 
-
 <!-- victim section -->
-
-	<section class="section-welcome landing-section"  id="victims" onclick="mobMenuUncheck();">
+	<section class="section-welcome landing-section" id="victims" onclick="mobMenuUncheck();">
 		<div class="container grid">
 			<div class="welcome-left victims">
 				<h2>
@@ -241,7 +236,7 @@
 				<h3>
 					Who is a victim
 				</h3>
-				
+
 				<p>
 					Victim is a person or a legal entity who/which suffered pecuniary or non-pecuniary damages caused by a crime. The law envisages that the victim can be an individual (human being) but also a legal entity.
 				</p>
@@ -254,7 +249,6 @@
 				<p>
 					<a href="http://www.legalaid.gov.ua/" target="_blank" rel="nofollow noopener noreferrer">Link to Free Legal Aid Centre</a>
 				</p>
-				
 			</div>
 			<div class="welcome-right">
 				<h3>To be recognized as a victim</h3>
@@ -277,6 +271,7 @@
 			</div>
 		</div>
 	</section>
+
 <!-- footer -->
 	<footer class="sponsor-footer" onclick="mobMenuUncheck();">
 		<div class="container">
@@ -319,8 +314,8 @@
 	<script src="js/slick.js"></script>
 	<link rel="stylesheet" href="css/iso_bootstrap4.1.0min.css">
 	<script src="js/slider.js"></script>
-	<!-- scroll js -->
-	<script src="js/scroll.js"></script>
 
+	<!--smooth scroll and navbar height offset-->
+	<script src="js/scroll.js"></script>
 </body>
 </html>
