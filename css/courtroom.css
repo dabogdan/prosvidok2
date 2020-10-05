@@ -1,0 +1,79 @@
+.map {
+    position: relative;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.map img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.element {
+    fill: #054798;
+    stroke: red;
+    stroke-width: 5px;
+    opacity: .2;
+}
+
+.element:hover {
+    transition: opacity .2s ease;
+    opacity: .5;
+    cursor: pointer;
+    border: red solid 2px;
+}
+
+
+.description {
+    display: none;
+    position: absolute;
+    padding: 13px;
+    box-sizing: border-box;
+    width: 45%;
+    height: auto;
+    box-shadow: 0 0 15px 10px #ccc;
+    left: 20px;
+    top: 20px;
+    font-family: sans-serif;
+    font-size: .9rem;
+    background-color: #14779d;
+    opacity: .9;
+    color: white;
+    text-align: left;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 1024px) {
+    .map {
+        max-width: 100%;
+    }
+    .description {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .description {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .map{
+        min-width: 100%;
+    }
+    .description {
+        font-size: 9px;
+    }
+}
