@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- English version -->
+
+<!-- For IE <= 9 -->
+<!--[if IE]>
+<script type="text/javascript">
+	window.location = "IE.html";
+</script>
+<![endif]-->
+
+<!-- For IE > 9 -->
+<script type="text/javascript">
+	if (window.navigator.msPointerEnabled) {
+		window.location = "IE.html";
+	}
+</script>
+
+
 <head>
 
 	<meta charset="utf-8">
