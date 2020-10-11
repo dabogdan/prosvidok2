@@ -1,159 +1,37 @@
 $('.witness-box').hover(
     function () {
         $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
+        $('.description').fadeIn();
     },
     function () {
-        $('.description').fadeOut(10);
+        $('.description').fadeOut(25);
     }
-);
+);const descriptionBoxBelow = document.getElementsByClassName("description-below")[0];
+const descriptionBoxTextBelow = document.getElementsByClassName("description-text")[0];
+const descriptionOnPicture = document.getElementsByClassName("description")[0];
+const defaultText = "Please, click or hover the mouse over the item on the picture above to get its description.";
 
-$('.bench').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
+const mouseOut = () => {
+    descriptionBoxTextBelow.innerHTML = defaultText;
+    descriptionOnPicture.style.display = 'none';
+}
 
-$('.defence-lawyer').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
+if (window.innerWidth <= 980) {
+    descriptionBoxBelow.style.display = 'block';
+}
 
-$('.defendant-in-custody').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
+const descriptionOnHover = (element) => {
+    if (window.innerWidth <= 980) {
+        //if mobile version
+        descriptionBoxTextBelow.innerHTML = element.getAttribute('description-data');
+    } else {
+        //if desktop version
+        descriptionOnPicture.innerHTML = element.getAttribute('description-data');
+        descriptionOnPicture.style.display = 'block';
+        if (element.classList[1] === 'defendant-in-custody') {
+            descriptionOnPicture.style.left = 15.6 + 'rem';
+        } else {
+            descriptionOnPicture.style.left = 30 + 'px';
+        }
     }
-);
-
-$('.deliberation-room').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.convoy').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.national-emblem').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.national-flag').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.tv-screen').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.secretary').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.prosecutor').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.right-bar').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.left-bar').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.right-bench').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.left-bench').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
-
-$('.cam').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(25);
-    },
-    function () {
-        $('.description').fadeOut(10);
-    }
-);
+};
