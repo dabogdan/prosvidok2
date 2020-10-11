@@ -26,18 +26,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <style> {
-        opacity: 0
-    ;
-        overflow-x: hidden
-    ;
-    }
-    html {
-        background-color: #fff;
-    }</style>
 
-    <!-- accordion -->
-    <link rel="stylesheet" href="css/accordion.min.css">
+    <!-- courtroom CSS and js -->
+    <link rel="stylesheet" href="css/courtroom.css">
+    <script src="js/courtroom.js"></script>
 
 </head>
 
@@ -118,7 +110,8 @@
                           d="m 690.58272,568.21515 4.2753,401.92947 -27.57492,135.10708 344.642,-1.1733 -30.04705,-138.50173 V 569.30488 Z"
                           description-data="<b>Witness box.</b><br> The location of witness boxes can vary, but usually they are placed in such a position that the witness stands with his/her face to the judges and parties, and with his/her back to the spectators."
                           onmouseout="mouseOut();"
-                          onmouseover='descriptionOnHover(this);'>
+                          onmouseover='descriptionOnHover(this);'
+                          onclick='descriptionOnHover(this);'>
                     </path>
                     <path class="element bench"
                           d="m 639.47166,590.19128 -1.17334,-42.24033 53.97376,-2.34669 5.86671,-53.97375 c 2.63796,-23.38029 7.67383,-45.08205 41.06699,-46.9337 26.54864,-0.44295 41.48027,18.47579 49.28038,49.28038 11.19254,-25.78301 15.0218,-56.47487 52.80041,-64.53383 35.04489,2.67405 47.7314,29.94233 51.62708,66.88052 11.77807,-20.45987 8.30954,-47.85001 51.62707,-53.97376 39.95915,11.02634 44.75246,30.16787 44.58701,50.45373 l 4.69337,52.80041 h 32.8536 l 14.0801,7.04006 -5.8667,11.73342 -1.1734,99.73412 29.3336,25.81353 -2.3467,52.80041 H 986.78105 L 985.6077,578.45785 997.34113,562.03106 H 681.71199 l -12.90676,15.25345 17.60013,10.56008 v 44.58702 z"
@@ -884,10 +877,6 @@
 
 <!-- scroll js -->
 <script src="js/scroll.js"></script>
-
-<!-- courtroom CSS and js -->
-<link rel="stylesheet" href="css/courtroom.css">
-<script src="js/courtroom.js"></script>
 
 </body>
 </html>
