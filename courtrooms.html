@@ -27,10 +27,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-    <!-- courtroom CSS and js -->
-    <link rel="stylesheet" href="css/courtroom.css">
-    <script src="js/courtroom.js"></script>
-
 </head>
 
 <body>
@@ -98,6 +94,9 @@
     </div>
 </header>
 
+<!-- courtroom CSS and js -->
+<link rel="stylesheet" href="css/courtroom.css">
+
 <!-- courtroom scheme section -->
 <section class="section-welcome landing-section" onclick="mobMenuUncheck();">
     <div class="container">
@@ -105,7 +104,6 @@
         <div class="court-scheme grid">
             <div class="map">
                 <svg viewBox="0 0 1701 1134">
-
                     <path class="element witness_box"
                           d="m 690.58272,568.21515 4.2753,401.92947 -27.57492,135.10708 344.642,-1.1733 -30.04705,-138.50173 V 569.30488 Z"
                           description-data="<b>Witness box.</b><br> The location of witness boxes can vary, but usually they are placed in such a position that the witness stands with his/her face to the judges and parties, and with his/her back to the spectators."
@@ -125,7 +123,6 @@
                           onmouseout="mouseOut();"
                           onmouseover='descriptionOnHover(this);'>
                     </path>
-
                     <path class="element defendant-in-custody"
                           d="m 160.44039,209.27007 260.42498,102.30982 -7.84881,346.66525 c -26.58891,-20.32079 -39.25611,-5.83733 -53.97375,3.52003 l 9.38674,45.76036 -370.7547731,-2.98294 4.6504462,-495.27251 z"
                           description-data="<b>Defendant in custody.</b><br> If defendant is in custody, then the defendant’s closed facility is usually behind the defence counsel, so that they can communicate throughout the court hearing)."
@@ -217,17 +214,23 @@
                 </svg>
                 <div class="description"></div>
                 <img src="img/courtscheme.jpg" alt="">
-            </div>
+            </div> <!--/map -->
             <div class="description-below">
                 <div class="description-text">
                     Please, click or hover the mouse over the item on the picture above to get its description.
                 </div>
             </div>
-        <div style="text-align: center;">
-            <p><strong>Below you can see the actual courtrooms in Lviv city (click to expand the pictures).</strong></p>
-        </div>
-    </div>
+            <div style="text-align: center;">
+                <p><strong>Below you can see the actual courtrooms in Lviv city (click to expand the pictures).</strong>
+                </p>
+            </div>
+        </div> <!-- court-scheme grid -->
+    </div><!-- container -->
 </section> <!-- /courtroom scheme section -->
+
+<!-- courtroom js -->
+<script src="js/courtroom.js"></script>
+
 
 <!-- links section -->
 

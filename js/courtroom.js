@@ -1,12 +1,4 @@
-$('.witness-box').hover(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn();
-    },
-    function () {
-        $('.description').fadeOut(25);
-    }
-);const descriptionBoxBelow = document.getElementsByClassName("description-below")[0];
+const descriptionBoxBelow = document.getElementsByClassName("description-below")[0];
 const descriptionBoxTextBelow = document.getElementsByClassName("description-text")[0];
 const descriptionOnPicture = document.getElementsByClassName("description")[0];
 const defaultText = "Please, click or hover the mouse over the item on the picture above to get its description.";
