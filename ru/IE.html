@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unsopported browser</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<div id="unsupported-message">
+    <a href="#unsupported-modal" id="unsupported-overlay"></a>
+    <div id="unsupported-modal" role="alertdialog" aria-labelledby="unsupported-title">
+        <h2 id="unsupported-title">⚠ Unsupported Browser ⚠</h2>
+        <p> This website probably will not work great in the Internet Explorer. We generally only support the recent versions of
+            major browsers like Chrome, Firefox, Safari, and Edge. </p>
+        <h3>Microsoft drops the support for the Internet Explorer. <a href="https://www.microsoft.com/en-us/microsoft-365/windows/end-of-ie-support" target="_blank" rel="noopener">Read more</a></h3>
+        <p>If you think you're seeing this message in error, <a href="mailto:dmytro.bogdan@euam-ukraine.eu">email us.</a> and let us know your browser and version.</p>
+    </div>
+    <a href="https://www.microsoft.com/en-us/microsoft-365/windows/end-of-ie-support" id="unsupported-banner" role="alert" target="_blank" rel="noopener">
+        <strong> ⚠ Unsupported Browser ⚠ </strong>
+        Witness Support in Ukraine website may not work properly in this browser.
+    </a>
+    <style>
+        #unsupported-overlay,
+        #unsupported-modal {
+            display: block;
+            position: absolute;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: #000;
+            color: #D5D7DE;
+        }
+
+        #unsupported-overlay {
+            top: 0;
+            bottom: 0;
+            opacity: 0.7;
+        }
+
+        #unsupported-modal {
+            top: 80px;
+            margin: auto;
+            width: 90%;
+            max-width: 520px;
+            max-height: 90%;
+            padding: 40px 20px;
+            box-shadow: 0 10px 30px #000;
+            text-align: center;
+            overflow: hidden;
+            overflow-y: auto;
+            border: solid 7px #ffdd40;
+        }
+
+        #unsupported-message :last-child {
+            margin-bottom: 0;
+        }
+
+        #unsupported-message h2 {
+            font-family: 'Telefon', Sans-Serif;
+            font-size: 34px;
+            color: red;
+        }
+
+        #unsupported-message h3 {
+            font-size: 20px;
+            color: #FFF;
+        }
+
+        body.hide-unsupport {
+            padding-top: 24px;
+        }
+
+        body.hide-unsupport #unsupported-message {
+            visibility: hidden;
+        }
+
+        #unsupported-banner {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ffdd40;
+            color: #000;
+            font-size: 14px;
+            padding: 2px 5px;
+            line-height: 1.5;
+            text-align: center;
+            visibility: visible;
+            z-index: 199;
+        }
+
+        #unsupported-banner a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 800px), (max-height: 500px) {
+            #unsupported-message .modal p {
+                /* font-size: 12px; */
+                line-height: 1.2;
+                margin-bottom: 1em;
+            }
+
+            #unsupported-modal {
+                position: absolute;
+                top: 20px;
+            }
+
+            #unsupported-message h1 {
+                font-size: 22px;
+            }
+
+            body.hide-unsupport {
+                padding-top: 0px;
+            }
+
+            #unsupported-banner {
+                position: static;
+            }
+
+            #unsupported-banner strong,
+            #unsupported-banner u {
+                display: block;
+            }
+        }
+    </style>
+</div>
+
+</body>
+</html>

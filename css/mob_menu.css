@@ -1,167 +1,188 @@
 /* mobar */
 
 .mobar {
-  background-color: inherit;
-  -webkit-box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-          box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: relative;
-  width: 100%;
-  z-index: 8;
+    background-color: inherit;
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: relative;
+    width: 100%;
+    z-index: 8;
 }
 
 .mobar ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  z-index: 10;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    z-index: 10;
 }
 
 .mobar li a {
-  display: block;
-  color: white;
-  padding: 20px 20px;
-  text-decoration: none;
-  z-index: 15;
-  background-color: #293A43;
+    display: block;
+    color: white;
+    padding: 20px 20px;
+    text-decoration: none;
+    z-index: 15;
+    background-color: #293A43;
 }
 
 .mobar li a:hover,
 .mobar .mobmenu-btn:hover {
-  background-color: inherit;
+    background-color: inherit;
 }
 
 .mobar .logo {
-  color: #fff;
-  display: block;
-  float: left;
-  font-size: 1.5em;
-  padding: 12px 20px;
-  text-decoration: none;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    padding: 12px 20px;
+    text-decoration: none;
 }
 
 /* mobmenu */
 
 .mobmenu {
-  clear: both;
-  max-height: 0;
-  -webkit-transition: max-height .2s ease-out;
-  transition: max-height .2s ease-out;
-  display: none;
+    clear: both;
+    max-height: 0;
+    -webkit-transition: max-height .2s ease-out;
+    transition: max-height .2s ease-out;
+    display: none;
 }
 
 /* mobmenu icon */
 
 .mobar .mobmenu-icon {
-  cursor: pointer;
-  display: block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .mobar .mobmenu-icon .navicon {
-  background: #fff;
-  display: block;
-  height: 2px;
-  position: relative;
-  -webkit-transition: background .2s ease-out;
-  transition: background .2s ease-out;
-  width: 18px;
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    -webkit-transition: background .2s ease-out;
+    transition: background .2s ease-out;
+    width: 18px;
 }
 
 .mobar .mobmenu-icon .navicon:before,
 .mobar .mobmenu-icon .navicon:after {
-  background: #fff;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
-  width: 100%;
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    width: 100%;
 }
 
 .mobar .mobmenu-icon .navicon:before {
-  top: 5px;
+    top: 5px;
 }
 
 .mobar .mobmenu-icon .navicon:after {
-  top: -5px;
+    top: -5px;
 }
 
 /* mobmenu btn */
 
 .mobar .mobmenu-btn {
-  display: none;
+    display: none;
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu {
-  max-height: 340px;
+    max-height: 340px;
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon .navicon {
-  background: transparent;
+    background: transparent;
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon .navicon:before {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon .navicon:after {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon:not(.steps) .navicon:before,
 .mobar .mobmenu-btn:checked ~ .mobmenu-icon:not(.steps) .navicon:after {
-  top: 0;
+    top: 0;
 }
 
 /* Responsive */
 
-@media only screen and (max-width: 768px){
-    .mobar ul{
+@media only screen and (max-width: 992px) {
+    .mobar ul {
         background-color: inherit;
-    }  
-    .mobar li a {
-    padding: 15px;
-  }
-  .mobar .mobmenu-btn:checked ~ .mobmenu {
-    max-height: 340px;
-    display: block;
-    border: none;
-  }
-}
+    }
 
-@media only screen and (min-width: 768px) {
-  .mobmenu-wrapper{
-      background: #414141;
-      height: 55px;
-      line-height: 55px;
-      width: 100%;
-  }
-  .mobar li {
-    float: right;
-  }
-    .mobar .logo{
+    .mobar li a {
+        padding: 15px;
+        display: block
+    }
+
+    .mobar .mobmenu-btn:checked ~ .mobmenu {
+        max-height: 340px;
+        display: block;
+        border: none;
+    }
+
+    .mobmenu-wrapper {
+        background: #414141;
+        height: 55px;
+        line-height: 55px;
+        width: 100%;
+    }
+
+    .mobar li {
+        float: right;
+        padding: 5px 20px;
+    }
+
+    .mobar .logo {
         line-height: 1;
     }
-  .mobar li a {
-    color: #fff;
-    padding: 0px 30px;
-  
-  }
-  .mobar .mobmenu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
+
+    .mobar li a {
+        color: #fff;
+        padding: 10px 35px;
+    }
+
+    .mobar .mobmenu {
+        clear: none;
+        float: right;
+        max-height: 340px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mobar li a {
+        color: #fff;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .mobar li a{
+        font-size: .8rem;
+    }
+    .menu_word {
+        display: none;
+    }
 }

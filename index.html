@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- English version -->
+<html lang="uk">
+<!-- Ukrainian version -->
 
 <!-- For IE <= 9 -->
 <!--[if IE]>
@@ -19,7 +19,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Witness Support v2.0</title>
+    <title>Підтримка свідків v2.0</title>
     <meta name="description" content="">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -39,55 +39,54 @@
         <div class="nav-logo">
             <a href="index.html">
                 <div class="logo-text">
-                    Witness Support
+                    Підтримка свідків
                 </div>
                 <div class="in-ukraine">
-                    in Ukraine
+                    в Україні
                 </div>
             </a>
         </div>
         <div class="menu">
             <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="witness-advice.html" class="nav-link">Advice</a></li>
-                <li><a href="in-court.html" class="nav-link">In Court</a></li>
-                <li><a href="courtrooms.html" class="nav-link">Courtrooms</a></li>
-                <li><a href="#victims" class="nav-link victims-link" onclick="mobMenuUncheck();">Victims</a></li>
+                <li><a href="index.html" class="nav-link">Головна</a></li>
+                <li><a href="witness-advice.html" class="nav-link">Поради</a></li>
+                <li><a href="in-court.html" class="nav-link">В суді</a></li>
+                <li><a href="courtrooms.html" class="nav-link">Судові зали</a></li>
+                <li><a href="#victims" class="nav-link victims-link" onclick="mobMenuUncheck();">Потерпілим</a></li>
             </ul>
         </div> <!--/.menu -->
 
         <!-- language switcher -->
         <div class="lang-menu">
-            <label class="lang_label" for="languages">Language:</label>
-            <select id="languages" name="languages">
-                <option value="ua">ua</option>
-                <option value="ru">ru</option>
-                <option value="en" selected>en</option>
+            <label class="lang_label" for="languages">Мова:</label>
+            <select id="languages" name="languages" onChange="window.location.href=this.value">
+                <option value="ua" selected>ua</option>
+                <option value="/ru/index.html">ru</option>
+                <option value="/en/index.html">en</option>
             </select>
         </div>
         <!-- mobile menu -->
         <div class="mobar">
             <!-- <div class="menu_word">Menu</div> -->
-            <label class="menu_label" for="languages">MENU:</label>
+            <label class="menu_label" for="languages"><span class="menu_word">МЕНЮ:</span></label>
 
             <input class="mobmenu-btn" type="checkbox" id="mobmenu-btn"/>
-            <label class="mobmenu-icon" for="mobmenu-btn"><span class="navicon"></span></label>
+            <label class="mobmenu-icon" for="mobmenu-btn"><span class="navicon"></span></label><br>
             <ul class="mobmenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="witness-advice.html">Advice</a></li>
-                <li><a href="in-court.html">In Court</a></li>
-                <li><a href="courtrooms.html">Courtrooms</a></li>
-                <li><a href="#victims" class="victims-link" onclick="mobMenuUncheck();">Victims</a></li>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="witness-advice.html">Поради</a></li>
+                <li><a href="in-court.html">В суді</a></li>
+                <li><a href="courtrooms.html">Судові зали</a></li>
+                <li><a href="#victims" class="victims-link" onclick="mobMenuUncheck();">Потерпілим</a></li>
             </ul>
-        </div>
-        <!--./mobile menu  -->
-    </div>
+        </div><!--./mobile menu  -->
+    </div><!--./container-->
 </nav>
 
 <!-- main header -->
 <header class="main-header grid" style="background-image: url(img/shev_court_bench.jpeg);" onclick="mobMenuUncheck();">
     <div class="header-content">
-        <h1>Welcome to the Witness Support website.</h1>
+        <h1>Вітаємо вас на сайті підтримки свідків</h1>
         <div class="arrow bounce">
             <a class="fa fa-arrow-down fa-2x" href="#welcome"></a>
         </div>
@@ -99,28 +98,34 @@
 <section class="section-welcome landing-section" id="welcome" onclick="mobMenuUncheck();">
     <div class="container grid">
         <div class="welcome-left">
-            <h2>Welcome!</h2>
-            <p>Everyone can become a witness. Witnesses play a very important function in criminal proceedings. Their
-                statements help courts establish the facts and thus contribute to justice being served.</p>
-            <p>The question of whether someone is guilty or innocent can depend to a great extent on the testimony of
-                witnesses. Therefore, they constitute an integral part of the criminal justice system.</p>
-            <p>Witnessing a crime can have a traumatizing impact on an individual. The provision of a witness statement
-                greatly helps the healing and closure process of an affected person.</p>
+            <h2>Вітаємо!</h2>
+            <p>Кожен може стати свідком. Свідки відіграють дуже важливу роль у кримінальному провадженні. Їхні показання
+                допомагають судам встановлювати факти, що, в свою чергу, допомагає здійснювати правосуддя.
+            </p>
+            <p>Встановлення чиєїсь вини або невинуватості може суттєво залежати від показань свідків. Отже, свідки є
+                невід’ємною частиною системи кримінального правосуддя.
+            </p>
+            <p>Людина, що стала свідком, може постраждати від травмуючого впливу злочину. Сама можливість надання
+                показать в значній мірі сприяє процесу загоювання та доведення процесу до завершення для постраждалої
+                людини.</p>
 
         </div>
         <div class="welcome-right">
-            <p>Thousands of witnesses and victims of crimes give testimony in courts during criminal procedure each
-                year. However, many witnesses do this for the first time in their life. Therefore, they may not be so
-                well informed about their important role.</p>
-            <p>This website is supported by the <a href="http://www.euam-ukraine.eu/" target="_blank"
-                                                   rel="noopener noreferrer">European Union Advisory Mission in
-                Ukraine</a> (EUAM) to increase witnesses’ awareness of their responsibilities during criminal
-                proceedings and make the experience of appearing before a court less stressful.</p>
-            <p>It is important to note that witness support should not be confused with witness protection. The latter
-                is available only to witnesses who feel intimidated or threatened. To find out more please see the
-                section “<a href="https://prosvidok.info/en/witness-protection/" target="_blank"
-                            rel="noopener noreferrer">Witness Protection</a>“.</p>
-            <p>The information on this website is accurate according to the law as it stands at 1 February 2019.</p>
+            <p>Тисячі свідків та потерпілих від злочинів кожного року дають свідчення в судах під час розгляду
+                кримінальних справ. Багато хто з них робить це вперше в житті. Тому вони можуть не повністю розуміти
+                наскільки важлива їхня роль.
+            </p>
+            <p>Цей сайт створено за підтримки <a href="http://www.euam-ukraine.eu/" target="_blank"
+                                                 rel="noopener noreferrer">Консультативної Місії Європейського Союзу в
+                Україні</a> (КМЄС), щоб проінформувати свідків про їхню відповідальність під час кримінального процесу,
+                а також зменшити стрес під час давання свідчень в суді.</p>
+            <p>Підтримку свідків не слід плутати із захистом свідків. Захистом забезпечуються лише ті свідки, яких
+                залякують або яким погрожують. Щоб дізнатися більше, відвідайте розділ “<a
+                        href="witness-advice.html#protection" target="_blank"
+                        rel="noopener noreferrer">Захист свідків</a>“.</p>
+            <p>Інформація, наведена на цьому сайті, є актуальною відповідно до законодавства станом на 1 лютого 2019
+                року.
+            </p>
         </div>
     </div>
 </section>
@@ -131,7 +136,7 @@
     <div class="container grid">
         <div class="row justify-content-center pb-3">
             <div class="col-md-7 text-center heading-section ftco-animate">
-                <h1 class="mb-4">Quick links</h1>
+                <h1 class="mb-4">Корисні посилання</h1>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
@@ -140,7 +145,7 @@
                     <div class="icon d-flex justify-content-center align-items-center">
                         <span class="flaticon-handcuffs"></span>
                     </div>
-                    <h3><a href="#crime-info" class="crime-info">Crime info</a></h3>
+                    <h3><a href="#crime-info" class="crime-info"> Інфо про злочин</a></h3>
                 </div>
             </div>
             <div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -148,7 +153,7 @@
                     <div class="icon d-flex justify-content-center align-items-center">
                         <span class="flaticon-auction"></span>
                     </div>
-                    <h3><a href="in-court.html#trial-day">Going to the court</a></h3>
+                    <h3><a href="in-court.html#trial-day">Як поводитися в суді</a></h3>
                 </div>
             </div>
             <div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -156,7 +161,7 @@
                     <div class="icon d-flex justify-content-center align-items-center">
                         <span class="flaticon-shield"></span>
                     </div>
-                    <h3><a href="witness-advice.html#protection">Witness protection</a></h3>
+                    <h3><a href="witness-advice.html#protection">Захист свідків</a></h3>
                 </div>
             </div>
             <div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -164,7 +169,7 @@
                     <div class="icon d-flex justify-content-center align-items-center">
                         <span class="flaticon-employee"></span>
                     </div>
-                    <h3><a href="witness-advice.html#rights-obligations">Witness advice</a></h3>
+                    <h3><a href="witness-advice.html#rights-obligations">Поради свідкам</a></h3>
                 </div>
             </div>
             <div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -172,7 +177,7 @@
                     <div class="icon d-flex justify-content-center align-items-center">
                         <span class="flaticon-money"></span>
                     </div>
-                    <h3><a href="witness-advice.html#compensation">How to get compensated</a></h3>
+                    <h3><a href="witness-advice.html#compensation">Як отримати компенсацію</a></h3>
                 </div>
             </div>
             <div class="col-md-3 col-lg-2 col-sm-6 text-center">
@@ -180,7 +185,7 @@
                     <div class="icon d-flex justify-content-center align-items-center">
                         <span class="flaticon-lawyer"></span>
                     </div>
-                    <h3><a href="witness-advice.html#free-legal-aid">Free Legal Aid</a></h3>
+                    <h3><a href="witness-advice.html#free-legal-aid">Безоплатна правова допомога</a></h3>
                 </div>
             </div>
         </div>
@@ -191,16 +196,18 @@
 <!-- pilot section -->
 <section class="landing-section section-blog" onclick="mobMenuUncheck();">
     <div class="container">
-        <h2>Pilot Project of Witness Support Volunteering Service</h2>
+        <h2>Пілотний проект волонтерської підтримки свідків в Україні</h2>
         <div class="blog-home grid pilot">
             <p class="blog-item grid">
-                The European Union Advisory Mission (EUAM) in Ukraine is implementing the Pilot the Project of the
-                Witness Support Volunteering Service together with the Shevchenkivskyi District Court of Lviv city, the
-                Lviv Regional Prosecutor’s Office and the Lviv State University of Internal Affairs, the National
-                University “Lvivska Polytechnica”, the Institute of Law, Psychology and Innovative Education. <br><br>
-                Volunteers offer personal assistance and practical advice to witnesses before the latter will testify in
-                the court. If the court, which summoned you to give evidence, has a witness support volunteers, you will
-                receive a leaflet together with a summons to the court.
+                Консультативна Місія Європейського Союзу в Україні (КМЄС) впроваджує в життя Пілотний проект підтримки
+                свідків в Україні
+                разом з Шевченківським районним судом міста Львова, Львівською обласною прокуратурою, Львівським
+                державним унівенситетом внутрішніх справ, Львівським національним університетом ім. Івана Франка.
+                <br><br>
+                В цьому проекті працюють волонтери, які пропонують надання особистої допомоги та практичних порад
+                свідкам перед тим як останні будуть давати свідчення. Якщо суд, до якого вас викликали давати свідчення,
+                має волонтерську підтримку свідків, ви отримаєте про це інформаційне повідомлення разом із повісткою чи
+                викликом до суду.
             </p>
             <p class="blog-item grid none">
                 <span class="blog-item-img" style='background-image: url(img/cut_ws.jpg)'></span>
@@ -213,23 +220,26 @@
 <!-- crime section -->
 <section id='crime-info' class="landing-section section-blog crime" onclick="mobMenuUncheck();">
     <div class="container">
-        <h2>Crime Information <br> What to do if you have witnessed a crime?</h2>
+        <h2>Інформація про злочин <br> Що робити якщо ви стали свідком злочину?</h2>
         <div class="blog-home grid">
             <p class="blog-item grid">
                 <span class="blog-item-img" style='background-image: url(img/crime.jpg)'></span>
             </p>
 
             <p class="blog-item">
-                If you have witnessed a situation, which you think is illegal and might be a crime, immediately report
-                it to the police on the telephone line “102” and wait for the arrival of law enforcement officers to
-                testify.<br><br>
-                There are many different types of crimes stipulated in the Criminal Code of Ukraine. It is not your
-                responsibility to determine whether the behaviour you witnessed or were victim of is a crime under the
-                Criminal Code or an administrative offence. This is the responsibility of law enforcement
-                authorities.<br><br>
-                There are also some important tips on the <a
+                Якщо ви стали свідком ситуації, яка, на вашу думку, є протиправною та може містити ознаки злочину, ви
+                маєте невідкладно повідомити про це поліцію за телефоном “102” та дочекатися прибуття поліцейських для
+                надання свідчень.
+
+                <br><br>
+                Кримінальний кодекс України передбачає багато різних видів злочинів. Ви не зобов’язані визначати, чи
+                кваліфікується дія, свідком якої ви стали або від якої ви постраждали, як злочин відповідно до
+                Кримінального кодексу, або як адміністративне правопорушення. Це – завдання правоохоронних органів.
+
+                <br><br>
+                Важливі поради також можна знайти на <a
                     href="https://www.npu.gov.ua/gromadyanam/korisna-informacziya/zapitannya-ta-poradi.html"
-                    target="_blank" rel="noopener">Website of the National Police of Ukraine</a>
+                    target="_blank" rel="noopener">Офіційному вебсайті Національної поліції України</a>
             </p>
         </div>
     </div>
@@ -240,14 +250,14 @@
 <section class="formsection" onclick="mobMenuUncheck();">
     <div class="container">
         <div class="ask-legal-clinic">
-            <h1>Contact form to the Free Legal Clinic</h1>
+            <h1>Контактна форма безкоштовної юридичної клініки</h1>
         </div>
         <form action="" class="grid">
-            <div><input type="text" name='name' placeholder="Your name is..." required></div>
-            <div><input type="text" name='name' placeholder="Your email is..."></div>
-            <div><input type="text" name='name' placeholder="Your phone No is..."></div>
+            <div><input type="text" name='name' placeholder="Ваше ім'я..." required></div>
+            <div><input type="text" name='name' placeholder="Ваш email ..."></div>
+            <div><input type="text" name='name' placeholder="Ваш No телефону..."></div>
             <div>
-                <button class="button">Send Email</button>
+                <button class="button">Надіслати Email</button>
             </div>
         </form>
     </div>
@@ -258,66 +268,70 @@
     <div class="container grid">
         <div class="welcome-left victims">
             <h2>
-                Information for victims <br> in criminal proceedings
+                Інформація для потерпілих <br> у кримінальному провадженні
             </h2>
             <h3>
-                Who is a victim
+                Хто такий потерпілий
             </h3>
 
             <p>
-                Victim is a person or a legal entity who/which suffered pecuniary or non-pecuniary damages caused by a
-                crime. The law envisages that the victim can be an individual (human being) but also a legal entity.
+                Потерпілий (а) – це особа (фізична або юридична), що зазнала моральної, фізичної або матеріальної шкоди
+                в результаті злочину.
+
+
             </p>
             <p>
-                Due to the adversarial nature of criminal justice, victims have a significantly more impact on the
-                proceedings. This implies that a victim enjoys the full rights of the party in criminal procedures
-                unlike a witness.
+                Через принцип рівності та змагальності сторін в кримінальному судочинстві, потерпілий має значно більший
+                вплив на провадження. Це означає, що потерпілий користується повними правами сторони по справі у
+                кримінальному провадженні, на відміну від свідка.
+
+
             </p>
             <p>
-                If you are a victim of crime, you have a right to testify, not obligation. Therefore, you can refuse to
-                testify and you are not criminally liable for refusing to testify (while witness is a criminally liable
-                for refusing to testify). However, it is highly recommended that you testify to enable the court to
-                restore justice. Victim cannot be compelled to testify and to be brought to court by force. If you
-                choose to testify though, you must tell the truth. As a victim, you are also criminally liable for false
-                testimony.
+                Якщо ви є потерпілим від злочину, ви не зобов’язані давати свідчення. В цьому аспекті потерпілі
+                відрізняються від свідків – свідок може бути притягнутий до кримінальної відповідальності за відмову
+                давати свідчення, а потерпілий ні. Однак, рекомендується давати свідчення, для того щоб забезпечити
+                відправлення правосуддя. Якщо ви вирішите давати свідчення, ви зобов’язані казати правду. Потерпілий
+                також може бути притягнутий до кримінальної відповідальності за надання неправдивих свідчень.
+
+
             </p><br class="none"><br class="none">
             <p>
-                <a href="http://www.legalaid.gov.ua/" target="_blank" rel="nofollow noopener noreferrer">Link to Free
-                    Legal Aid Centre</a>
+                <a href="http://www.legalaid.gov.ua/" target="_blank" rel="nofollow noopener noreferrer">Посилання на
+                    сайт центру надання безкоштовної правової допомоги</a>
             </p>
         </div>
         <div class="welcome-right">
-            <h3>To be recognized as a victim</h3>
+            <h3>Як особа визнається потерпілою</h3>
             <p>
-                You gain the status of a victim and receive the rights and duties of a victim from the time when you
-                report that criminal offense or from the moment of filing an application for engaging into a process as
-                a victim.</p>
-            <p>The investigator or prosecutor may adopt a motivated ruling refusing to recognize you to be a victim if
-                they consider that you did not suffer damage as a result of the crime. Such decision may be appealed to
-                the investigating judge. Assistance of an advocate or a free legal aid lawyer is recommended. Engage an
-                advocate or contact your <a
+                Ви набуваєте статусу потерпілого, а також отримуєте права і обов’язки, пов’язані з набуттям цього
+                статусу в той момент, коли ви заявили про злочин або в той момент, коли ви подали офіційну заяву щодо
+                про залучення до провадження у якості потерпілого.
+            </p>
+            <p>Слідчий або прокурор можуть відмовитись визнавати вас потерпілою особою, якщо матимуть підстави вважати,
+                що ви не зазнали моральної, фізичної або матеріальної шкоди в результаті злочину, про який ви заявили.
+                Це рішення може бути скасоване слідчим суддею за вашою скаргою. Рекомендуємо скористуватися допомогою
+                адвоката або юриста найближчого
+
+                <a
                         href="https://www.legalaid.gov.ua/kliyentam/poshuk-najblyzhchogo-tsentru-ta-dystantsijnyh-punktiv/"
-                        target="_blank" rel="noopener noreferrer">Local Free Legal Aid Centre</a>.
+                        target="_blank" rel="noopener noreferrer">Центру надання безоплатної правової допомоги</a>.
             </p>
             <p>
-                If a criminal offence caused the death of a person, or if this person&#8217;s condition prevents him/her
-                from filing an appropriate application, family members of such deceased person are to be considered to
-                be victims.
+                Якщо внаслідок кримінального правопорушення настала смерть особи або особа перебуває у стані, який
+                унеможливлює подання нею відповідної заяви, потерпілим визнаються близькі родичі такої особи.
             </p>
             <p>
-                If you did not file an application that a criminal offense has been committed against you or an
-                application for engaging into proceedings, you can be recognized as a victim by the investigator, the
-                prosecutor or the court. Your written consent will be necessary. In the absence of such consent, you may
-                be called into proceedings as a witness if necessary.
+                Якщо слідчий, прокурор, або суд визнав вас постраждалою особою, то ви маєте написати письмову згоду. За
+                відсутності такої згоди, вас можуть залучити до кримінального провадження як свідка.
             </p>
             <p>
-                A written memo advising you on your procedural rights and duties as a victim, which you will receive
-                usually from a law enforcement officer, serves as a confirmation that you have procedural status of
-                victim. Therefore, keep this document.
+                Ви отримаєте пам’ятку про процесуальні права та обов’язки потерпілої особи, яку зазвичай вручає
+                працівник правоохоронного органу. Ця пам’ятка є підтвердженням того, що ви набули статусу постраждалої
+                особи. Зберігайте цей документ в надійному місці.
             </p>
             <p>
-                <a href="http://www.legalaid.gov.ua/" target="_blank" rel="nofollow noopener noreferrer">Link to Free
-                    Legal Aid Centre</a>
+                <a href="http://www.legalaid.gov.ua/" target="_blank" rel="nofollow noopener noreferrer">Посилання на Центр безоплатної правової допомоги.</a>
             </p>
 
         </div>
@@ -327,20 +341,14 @@
 <!-- footer -->
 <footer class="sponsor-footer" onclick="mobMenuUncheck();">
     <div class="container">
-        <h2>This Project is supported by:</h2>
+        <h2>Проект впроваджується за підтримки:</h2>
         <section class="customer-logos slider bootstrap">
-            <div class="slide"><img src="img/EUAM_logo.png"><a href="http://www.euam-ukraine.eu/">European Union
-                Advisory Mission in Ukraine</a></div>
-            <div class="slide"><img src="img/Emblem_PPO.png"><a href="https://lviv.gp.gov.ua/ua/index.html">Lviv
-                Regional Prosecution Office</a></div>
-            <div class="slide"><img src="img/UA_logo.png"> <a href="https://sh.lv.court.gov.ua/sud1328/">Shevchenkivskyi
-                Court of Lviv City</a></div>
-            <div class="slide"><img src="img/Logo_LVDUVS.png"><a href="http://www.lvduvs.edu.ua/">Lviv State University
-                of Internal Affairs</a></div>
-            <div class="slide"><img src="img/lnu-logo.jpg"><a href="https://www.lnu.edu.ua/">Ivan Franko National
-                University of Lviv</a></div>
-            <div class="slide"><img src="img/police.png"><a href="https://www.lnu.edu.ua/">Lviv Regional Main Department
-                of National Police</a></div>
+            <div class="slide"><img src="img/EUAM_logo.png"><a href="http://www.euam-ukraine.eu/">Консультативна Місія Європейського Союзу в Україні</a></div>
+            <div class="slide"><img src="img/Emblem_PPO.png"><a href="https://lviv.gp.gov.ua/ua/index.html">Львівська обласна прокуратура</a></div>
+            <div class="slide"><img src="img/UA_logo.png"> <a href="https://sh.lv.court.gov.ua/sud1328/">Шевченківський районний суд міста Львова</a></div>
+            <div class="slide"><img src="img/Logo_LVDUVS.png"><a href="http://www.lvduvs.edu.ua/">Львівський державний університет внутрішніх справ</a></div>
+            <div class="slide"><img src="img/lnu-logo.jpg"><a href="https://www.lnu.edu.ua/">Львівський національний університет імені Івана Франка</a></div>
+            <div class="slide"><img src="img/police.png"><a href="https://www.lnu.edu.ua/">Головне управління Національної поліції у Львівській області</a></div>
         </section>
     </div>
 </footer>
@@ -349,7 +357,7 @@
 <!-- lower footer -->
 <footer class="lower-footer" onclick="mobMenuUncheck();">
     <div class="container">
-        <div class="footer-copy">All rights reserved. EUAM Ukraine ©</div>
+        <div class="footer-copy">Всі права захищені. КМЄС України ©</div>
     </div>
 </footer>
 
