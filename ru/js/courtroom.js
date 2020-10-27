@@ -1,7 +1,7 @@
 const descriptionBoxBelow = document.getElementsByClassName("description-below")[0];
 const descriptionBoxTextBelow = document.getElementsByClassName("description-text")[0];
 const descriptionOnPicture = document.getElementsByClassName("description")[0];
-const defaultText = "Please, click or hover the mouse over the item on the picture above to get its description.";
+const defaultText = "Будь ласка, клікніть або наведіть мишкою поверх елементів малюнку зверху, щоб отримати опис елементів зали судового засідання.";
 
 const mouseOut = () => {
     descriptionBoxTextBelow.innerHTML = defaultText;

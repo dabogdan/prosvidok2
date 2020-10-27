@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- English version -->
+<html lang="ru">
+<!-- Russian version -->
 
 
 <!-- For IE <= 9 -->
 <!--[if IE]>
 <script type="text/javascript">
-	window.location = "IE.html";
+    window.location = "IE.html";
 </script>
 <![endif]-->
 
 <!-- For IE > 9 -->
 <script type="text/javascript">
-	if (window.navigator.msPointerEnabled) {
-		window.location = "IE.html";
-	}
+    if (window.navigator.msPointerEnabled) {
+        window.location = "IE.html";
+    }
 </script>
 
 
 <head>
 
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<title>Witness Support v2.0</title>
-	<meta name="description" content="">
+    <title>Поддержка свидетелей v2.0</title>
+    <meta name="description" content="">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<style> { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style> {
+        opacity: 0
+    ;
+        overflow-x: hidden
+    ;
+    }
+    html {
+        background-color: #fff;
+    }</style>
 
 
 </head>
@@ -35,456 +43,651 @@
 <body>
 <!-- scroll to the Top button -->
 
-<div  class="scrollTop" onclick="scrollToTop()">^</div>
+<div class="scrollTop" onclick="scrollToTop();">^</div>
 
 <!-- nav bar -->
 
-	<nav class="navbar">
-		<div class="container grid">
-			<div class="nav-logo">
-				<a href="index.html">
-					<div class="logo-text">
-						Witness Support
-					</div>
-					<div class="in-ukraine">
-						in Ukraine
-					</div>
-				</a>
-			</div>
-			<div class="menu">
-				<ul>
-					<li><a href="index.html" class="nav-link">Home</a></li>
-					<li><a href="witness-advice.html" class="nav-link">Advice</a></li>
-					<li><a href="in-court.html" class="nav-link">In Court</a></li>
-					<li><a href="courtrooms.html" class="nav-link">Courtrooms</a></li>
-					<li><a href="index.html#victims" class="nav-link">Victims</a></li>
-				</ul>
-			</div> <!--/.menu -->
+<nav class="navbar">
+    <div class="container grid">
+        <div class="nav-logo">
+            <a href="index.html">
+                <div class="logo-text">
+                    Поддержка свидетелей
+                </div>
+                <div class="in-ukraine">
+                    в Україні
+                </div>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" class="nav-link">Головна</a></li>
+                <li><a href="witness-advice.html" class="nav-link">Поради</a></li>
+                <li><a href="in-court.html" class="nav-link">В суді</a></li>
+                <li><a href="courtrooms.html" class="nav-link">Судові зали</a></li>
+                <li><a href="index.html#victims" class="nav-link victims-link"
+                       onclick="mobMenuUncheck();">Потерпілим</a></li>
+            </ul>
+        </div> <!--/.menu -->
 
-			<!-- language switcher -->
-			<div class="lang-menu">
-				<label class="lang_label" for="languages">Language:</label>
-				<select id="languages" name="languages">
-					<option value="ua">ua</option>
-					<option value="ru">ru</option>
-					<option value="en" selected>en</option>
-				</select>
-			</div>
-<!-- mobile menu -->
-			<div class="mobar">
-				<!-- <div class="menu_word">Menu</div> -->
-				<label class="menu_label" for="languages">MENU:</label>
+        <!-- language switcher -->
+        <div class="lang-menu">
+            <label class="lang_label" for="languages">Мова:</label>
+            <select id="languages" name="languages" onChange="window.location.href=this.value">
+                <option value="ua" selected>ua</option>
+                <option value="ru/in-court.html">ru</option>
+                <option value="en/in-court.html">en</option>
+            </select>
+        </div>
+        <!-- mobile menu -->
+        <div class="mobar">
+            <!-- <div class="menu_word">Menu</div> -->
+            <label class="menu_label" for="languages"><span class="menu_word">МЕНЮ:</span></label>
 
-				<input class="mobmenu-btn" type="checkbox" id="mobmenu-btn" />
-				<label class="mobmenu-icon" for="mobmenu-btn"><span class="navicon"></span></label>
-                <ul class="mobmenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="witness-advice.html">Advice</a></li>
-                    <li><a href="in-court.html">In Court</a></li>
-                    <li><a href="courtrooms.html">Courtrooms</a></li>
-                    <li><a href="index.html#victims">Victims</a></li>
-                </ul>
-			</div>
-<!--./mobile menu  -->
-		</div>
-	</nav>
+            <input class="mobmenu-btn" type="checkbox" id="mobmenu-btn"/>
+            <label class="mobmenu-icon" for="mobmenu-btn"><span class="navicon"></span></label><br>
+            <ul class="mobmenu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="witness-advice.html">Поради</a></li>
+                <li><a href="in-court.html">В суді</a></li>
+                <li><a href="courtrooms.html">Судові зали</a></li>
+                <li><a href="index.html#victims" class="victims-link" onclick="mobMenuUncheck();">Потерпілим</a></li>
+            </ul>
+        </div><!--./mobile menu  -->
+    </div><!--./container-->
+</nav>
 
 <!-- main header -->
-	<header class="main-header grid" style="background-image: url(img/shev_court_bench.jpeg);" onclick="mobMenuUncheck();">
-			<div class="header-content">
-				<h1>Witness in the court</h1>
-			</div>
-	</header>
+<header class="main-header grid" style="background-image: url(img/shev_court_bench.jpeg);" onclick="mobMenuUncheck();">
+    <div class="header-content">
+        <h1>Свідок в суді</h1>
+    </div>
+</header>
 
 
 <!-- why section -->
-	<section class="landing-section section-blog crime" onclick="mobMenuUncheck();">
-		<div class="container">
-			<h2>Why is a witness called to the court<br>to give a testimony?</h2>
-			<div class="blog-home grid">
-				<p class="blog-item grid none">
-					<span class="blog-item-img" style='background-image: url(img/hammer1.jpg)'></span>
-
-				</p>
-				<div class="blog-item">
-					<p>Sometimes witness testimony is the only evidence proving the guilt of the suspect. Therefore, the role of the witness in the criminal procedure is crucial. However, only witness testimony heard in court can be admitted as evidence by the judge. Therefore testimony given to the police is not final and needs to be repeated in the courtroom. That, however, does not mean that a witness is allowed to avoid being interviewed by the police/prosecutor or an investigative judge.</p>
-					<p>In Ukraine and in most countries in the world, there is a very important principle called the presumption of innocence. According to this principle, no person can be subjected to a criminal penalty unless their guilt is proven and established beyond reasonable doubt by a court. This means, when someone has committed a crime, they will receive a punishment only after their guilt is proven by such evidence.</p>
-					<p>If witnesses do not attend trial, the court will not be able to restore justice.</p>
- 				</div>
- 			</div>
-		</div>
-	</section> <!-- /why section -->
+<section class="landing-section section-blog crime" onclick="mobMenuUncheck();">
+    <div class="container">
+        <h2>Чому свідка викликають до суду?</h2>
+        <div class="blog-home grid">
+            <p class="blog-item grid none">
+                <span class="blog-item-img" style='background-image: url(img/hammer1.jpg)'></span>
+            </p>
+            <div class="blog-item">
+                <p>Sometimes witness testimony is the only evidence proving the guilt of the suspect. Therefore, the
+                    role of the witness in the criminal procedure is crucial. However, only witness testimony heard in
+                    court can be admitted as evidence by the judge. Therefore testimony given to the police is not final
+                    and needs to be repeated in the courtroom. That, however, does not mean that a witness is allowed to
+                    avoid being interviewed by the police/prosecutor or an investigative judge.</p>
+                <p>In Ukraine and in most countries in the world, there is a very important principle called the
+                    presumption of innocence. According to this principle, no person can be subjected to a criminal
+                    penalty unless their guilt is proven and established beyond reasonable doubt by a court. This means,
+                    when someone has committed a crime, they will receive a punishment only after their guilt is proven
+                    by such evidence.</p>
+                <p>If witnesses do not attend trial, the court will not be able to restore justice.</p>
+            </div>
+        </div>
+    </div>
+</section> <!-- /why section -->
 
 <!-- links section -->
 
 <section class="bootstrap ftco-section bg-light" onclick="mobMenuUncheck();">
-	<div class="container grid">
-		<div class="row justify-content-center pb-3">
-			<div class="col-md-7 text-center heading-section ftco-animate">
-				<h1 class="mb-4">Quick links</h1>
-			</div>
-		</div>
-		<div class="row d-flex justify-content-center">
-			<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-				<div class="practice-area">
-					<div class="icon d-flex justify-content-center align-items-center">
-						<span class="flaticon-handcuffs"></span>
-					</div>
-					<h3><a href="index.html#crime-info" class="crime-info">Crime info</a></h3>
-				</div>
-			</div>
-			<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-				<div class="practice-area ftco-animate">
-					<div class="icon d-flex justify-content-center align-items-center">
-						<span class="flaticon-auction"></span>
-					</div>
-					<h3><a href="#trial-day">Going to the court</a></h3>
-				</div>
-			</div>
-			<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-				<div class="practice-area ftco-animate">
-					<div class="icon d-flex justify-content-center align-items-center">
-						<span class="flaticon-shield"></span>
-					</div>
-					<h3><a href="witness-advice.html#protection">Witness protection</a></h3>
-				</div>
-			</div>
-			<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-				<div class="practice-area ftco-animate">
-					<div class="icon d-flex justify-content-center align-items-center">
-						<span class="flaticon-employee"></span>
-					</div>
-					<h3><a href="witness-advice.html#rights-obligations">Witness advice</a></h3>
-				</div>
-			</div>
-			<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-				<div class="practice-area ftco-animate">
-					<div class="icon d-flex justify-content-center align-items-center">
-						<span class="flaticon-money"></span>
-					</div>
-					<h3><a href="witness-advice.html#compensation">How to get compensated</a></h3>
-				</div>
-			</div>
-			<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-				<div class="practice-area ftco-animate">
-					<div class="icon d-flex justify-content-center align-items-center">
-						<span class="flaticon-lawyer"></span>
-					</div>
-					<h3><a href="witness-advice.html#free-legal-aid">Free Legal Aid</a></h3>
-				</div>
-			</div>
+    <div class="container grid">
+        <div class="row justify-content-center pb-3">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h1 class="mb-4">Корисні посилання</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-handcuffs"></span>
+                    </div>
+                    <h3><a href="index.html#crime-info" class="crime-info">Інфо про злочин</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-auction"></span>
+                    </div>
+                    <h3><a href="#trial-day">Як поводитися в суді</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-shield"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#protection">Захист свідків</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-employee"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#rights-obligations">Поради свідкам</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-money"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#compensation">Як отримати компенсацію</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-lawyer"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#free-legal-aid">Безоплатна правова допомога</a></h3>
+                </div>
+            </div>
 
-		</div>
-	</div>
+        </div>
+    </div>
 </section>
 
 <!-- before-court section -->
-	<section class="landing-section section-blog" onclick="mobMenuUncheck();">
-		<div class="container">
-			<h2>What is going to happen before court?</h2>
-			<p>Witnesses are very important participants in the process, because they are a key source of evidence of a crime. Sometimes they are the only source.</p>
-			<p>If the public prosecution, court or the defence counsel considers it necessary that you appear in court to give testimony, you will be summoned as a witness.</p>
-			<p>On this website, there are pictures of the <a href="https://prosvidok.info/en/in-courtroom/">typical courtroom</a> for you to familiarise yourself with the premises.</p>
-			<div class="blog-home grid">
-				<div class="blog-item">
-					<div class="acc_container">
-						<details class="default square">
-							<summary><strong>What if I do not appear?</strong></summary>
-							<p>You are legally obliged to appear if you have been summoned as a witness. This is also your contribution to the criminal justice system as well as a civic obligation. If you do not appear voluntarily, the police may bring you to court forcibly. The court may also fine witnesses who fail to appear.</p>
-						</details>
-						<details class="primary square">
-							<summary><strong>Location of the court</strong></summary>
-							<p>Make sure that you know where the court is and how to get there (you can find more information on the <a href="https://court.gov.ua/sudova-vlada/sudy/" target="_blank" rel="noopener">State Judicial Administration Website</a></u>).</p>
-							<p>If travelling by car, consider the traffic situation and plan your car parking in advance. Many courts, especially in big cities, do not have a public car parking place.</p>
-						</details>
-						<details class="default square">
-							<summary><strong>What if I get sick?</strong></summary>
-							<p>If you are ill and feel that you cannot appear in court, the court may exempt you from appearing, but you must immediately inform the court and confirm your absence with a medical certificate. The court has to make a formal decision whether you have to appear at a later stage. To avoid any misunderstanding, contact the court immediately after you fall ill.</p>
-						</details>
-						<details class="primary square">
-							<summary><strong>Can I refuse to testify?</strong></summary>
-							<p>If you are a family member or a close relative* of someone has been charged, then you have the right to refuse to testify on the basis of Art. 63 of the Constitution of Ukraine. You can also refuse to testify if you believe that you might incriminate yourself or a family member i.e. expose yourself or a family member to the risk of criminal prosecution. You can also refuse to testify if you cannot be heard as witness due to the fact that the information available to you is protected by professional or other privilege (click here for more information)</p>
-							<p>However, for the record, you still have to appear in court and refuse to testify orally in the court room.</p>
-							<p><em>*Close relatives and family members include spouses, parents, stepparents, sons, daughters, stepchildren, brothers, sisters, grandparents, great-grandparents, grandchildren, great-grandchildren, adopters or adoptees, guardians or caregivers, persons under guardianship as well as individuals living together and sharing household who have mutual rights and responsibilities, including individuals living together but not married</em>.</p>
-							<p>Take a look at the <a href="#" target="_blank" rel="noopener">advice section</a> of this website for more information.</p>
-						</details>
-						<details class="default square">
-							<summary><strong>Refresh your memory</strong></summary>
-							<p>Before you appear in court, you might want to think through what happened in connection with the incident you are to give evidence about. It may refresh your memory to look at the notes, photos or anything else you may have from the incident. You may take those notes to the court and ask the judge if you can assist your memory using them.</p>
-						</details>
-						<details class="primary square">
-							<summary><strong>What to wear in court?</strong></summary>
-							<p>There are no rules about what you should wear when you go to court, but most people will dressed smartly. Bring some warm clothes just in case, because it can be cold in court. Whatever you wear, you should make sure you are comfortable, because it can be a long day.</p>
-						</details>
-						 
-					</div> <!-- /acc_container -->
-				</div> <!-- /blog-item -->
-				<div class="blog-item">
-					<div class="acc_container">
-						<details class="default square">
-							<summary><strong>Can I bring food?</strong></summary>
-							<p>It can be a good idea to bring some water and food with you if you require a regular food intake. Usually courts have lunch breaks, during which you will be able to get out of the court and get some refreshments. However, it can happen that the court hearing cannot be interrupted for some reasons, in which case you have to notify the officer of the court (secretary or the assistant to the judge) that you need to have a break and will get back after that as soon as possible.</p>
-						</details>
-						<details class="primary square">
-							<summary><strong>Can I bring a child to the court?</strong></summary>
-							<p>This is not a good idea: this can be a long day and courts do not have any childcare facilities. In general, the court is not the best place for children.</p>
-							<p>It is not however prohibited to enter a court building with children. If you do take your children to court, you should bring a friend or relative with you to look after them while you are giving evidence. For further queries on this, feel free to contact the court directly.</p>
-						</details>
-						<details class="default square">
-							<summary><strong>If you have disabilities</strong></summary>
-							<p>If you are person with disability or have other special needs, you can contact the court directly to find out what facilities are available, for example access to the bathrooms. In case of any further queries, the contacts of all courts in Ukraine can be found on the official <a href="https://court.gov.ua/" target="_blank" rel="noopener">website for the Judiciary</a>.</p>
-						</details>
-						<details class="primary square">
-							<summary><strong>If you need time off work</strong></summary>
-							<p>If you have not already spoken with your employer, then let them know as soon as possible that you will need time off from work. Your employer has to allow you to carry out your witness obligations and pay your average salary for time off from work. You also can claim your expenses. <a href="https://prosvidok.info/en/compensation/">Click here to find out more</a>.</p>
-							<p>If your employer says you cannot have time off, you should inform the investigator, prosecutor or the defence lawyer (depending on who called you to be a witness) and/or the court. The court can issue a ‘witness summon’ paper that you can show to your employer to prove the exact time you have to be there. After the court hearing, a court secretary can issue the written confirmation certifying the exact time you spent in court. The employer is not allowed to refuse you to follow the summons.</p>
-						</details>
-						<details class="default square">
-							<summary><strong>Witness Support Pilot</strong></summary>
-							<p>In cooperation with the Shevchenkivskyi District court, Lviv Regional Public Prosecution Office, Lviv Ministry of Internal Affairs University and Lviv National University, the EU Advisory Mission in Ukraine is conducting a Pilot Project to establish a Witness Support Service.</p>
-							<p>This service is composed of volunteers who offer personal support and practical guidance to witnesses before they testify. If the court to which you are summoned to testify has such a witness support service, you will be informed of this when you are called by the court. Also, please, check appropriate the sections of this website for further details of Witness Support Pilot Project.</p>
-						</details>
-					</div><!-- /acc_container -->
-				</div> <!-- /blog-item -->
-			</div> <!-- /blog-home -->
-		</div> <!-- /container -->
-	</section> <!-- /whois section -->
+<section class="landing-section section-blog" onclick="mobMenuUncheck();">
+    <div class="container" id="before-court">
+        <h2>Що відбуватиметься перед тим як Ви прийдете до суду?</h2>
+        <p>Свідки є важливими учасниками судового провадження, оскільки вони є ключовим джерелом доказів скоєння
+            злочину. Іноді свідок – це єдине джерело.</p>
+        <p>Якщо прокурор, суд або захисник вважає, що вам необхідно з'явитися в суді і дати свідчення, ви отримаєте
+            виклик прибути до суду в ролі свідка.</p>
+        <p>На цьому вебсайті розміщена інтерактивна картинка <a href="courtrooms.html">типової зали судового
+            засідання</a> для Вас щоб ви могли ознайомитися з цими і подібними приміщеннями.</p>
+        <div class="blog-home grid">
+            <div class="blog-item">
+                <div class="acc_container">
+                    <details class="default square">
+                        <summary><strong>А якщо я не з'явлюсь до суду?</strong></summary>
+                        <p>Відповідно до законодавства ви зобов'язані з'явитися у суді, якщо вас викликають як свідка.
+                            Це, також, є ваш внесок в систему кримінального правосуддя, а також ваш громадянський
+                            обов'язок. Якщо ви не прибудете до суду добровільно, вас туди можуть примусово супроводити
+                            працівники поліції. Також, суд може накласти штраф на свідка, який не з'явився у суді.</p>
+                    </details>
+                    <details class="primary square">
+                        <summary><strong>Місцерозташування суду</strong></summary>
+                        <p>Переконайтеся, що ви знаєте де знаходиться суд і як туди дістатися (більше інформації ви
+                            знайдете на <a href="https://court.gov.ua/sudova-vlada/sudy/" target="_blank"
+                                           rel="noopener">сайті Державної судової адміністрації України</a>).</p>
+                        <p>Якщо ви плануєте їхати до суду на автомобілі, зверніть увагу на дорожньо-транспортну
+                            обстановку та заздалегідь подумайте де припаркувати автівку. Багато судів, особливо в
+                            великих містах, не мають громадської стоянки.</p>
+                    </details>
+                    <details class="default square">
+                        <summary><strong>А якщо я захворів?</strong></summary>
+                        <p>Якщо ви захворіли і відчуваєте, що не зможете прибути до суду, суд може звільнити вас від
+                            цього обов'язку, однак ви повинні негайно про це повідомити суд і представити підтверджуючий
+                            документ – довідку лікаря. Суд повинен прийняти офіційне рішення чи необхідно вам прибути до
+                            суду пізніше. Для того щоб уникнути будь-яких непорозумінь, як тільки ви захворіли, одразу
+                            повідомте суд.</p>
+                    </details>
+                    <details class="primary square">
+                        <summary><strong>Чи можу я відмовитися давати свідчення?</strong></summary>
+                        <p>Якщо ви є членом родини або близьким родичем особи, яку звинувачують у скоєнні злочину, ви
+                            маєте право відмовитися давати свідчення на підставі статті 63 Конституції України. Також,
+                            ви можете відмовитися давати свідчення, якщо вважаєте, що можете обмовити себе або члена
+                            своєї родини, тобто наразити на кримінальне переслідування. Ви можете відмовитися давати
+                            свідчення, якщо інформація, якою ви володієте є професійною таємницею.</p>
+                        <p>Однак, ви все одно зобов'язані з'явитися у суді і в залі суду засвідчити усно свою відмову
+                            давати свідчення.</p>
+                        <p><em>* До близьких родичів та членів сім’ї належать чоловік, дружина, батько, мати, вітчим,
+                            мачуха, син, дочка, пасинок, падчерка, рідний брат, рідна сестра, дід, баба, прадід,
+                            прабаба, внук, внучка, правнук, правнучка, усиновлювач чи усиновлений, опікун чи
+                            піклувальник, особа, яка перебуває під опікою або піклуванням, а також особи, які спільно
+                            проживають, пов'язані спільним побутом і мають взаємні права та обов'язки, у тому числі
+                            особи, які спільно проживають, але не перебувають у шлюбі.</em>.</p>
+                        <p>Перейдіть за посиланням на <a href="witness-advice.html" target="_blank" rel="noopener">сторінку
+                            з порадами</a> цього вебсайту для отримання більш детальної інформації.</p>
+                    </details>
+                    <details class="default square">
+                        <summary><strong>Пригадайте події</strong></summary>
+                        <p>Перед тим як прибути до суду, корисно буде пригадати події, про які ви будете давати
+                            свідчення. В цьому вам можуть допомогти ваші записи, фотографії, або інші
+                            речі/інформація/предмети з місця події. Ви можете взяти записи з собою до суду і запитати у
+                            судді чи можна ними скористатися під час засідання.</p>
+                    </details>
+                    <details class="primary square">
+                        <summary><strong>Що одягнути в суд?</strong></summary>
+                        <p>Не існує чітких правил стосовно того, в якому одязі приходити до суду, проте більшість людей
+                            одягають діловий охайний одяг. Візьміть із собою теплого светра або інший теплий одяг,
+                            оскільки в приміщенні суду іноді буває прохолодно. В обраному одязі ви маєте почуватися
+                            комфортно та зручно, оскільки ви можете провести в суді багато часу.</p>
+                    </details>
+
+                </div> <!-- /acc_container -->
+            </div> <!-- /blog-item -->
+            <div class="blog-item">
+                <div class="acc_container">
+                    <details class="default square">
+                        <summary><strong>Чи можу я принести їжу?</strong></summary>
+                        <p>Можна взяти з собою воду та їжу, якщо вам потрібно дотримуватись режиму харчування. Зазвичай
+                            в судах також є обідня перерва під час якої ви можете вийти із приміщення суду і щось
+                            перекусити. Однак, бувають випадки, коли з певних причин засідання суду не переривається. В
+                            такому випадку ви маєте повідомити працівника суду (секретаря або помічника судді), що вам
+                            потрібна перерва і що ви повернетеся до зали суду якомога швидше.</p>
+                    </details>
+                    <details class="primary square">
+                        <summary><strong>Чи можу я взяти дитину до суду?</strong></summary>
+                        <p>Це погана ідея, оскільки ви можете провести в суді багато часу, а суди, зазвичай, не мають
+                            кімнат догляду за дитиною або дитячих кімнат. І загалом, суд - не найкраще місце для
+                            дитини.</p>
+                        <p> Однак, заходити до приміщення суду з дитиною не забороняється. Якщо ви берете дітей з собою
+                            до суду, нехай з вами прийде також друг/подруга або родич, який зможе подивитися за дітьми
+                            поки ви даватимете свідчення. За більш детальною інформацією ви може звернутися
+                            безпосередньо до суду.</p>
+                    </details>
+                    <details class="default square">
+                        <summary><strong>Якщо у Вас є особливі потреби</strong></summary>
+                        <p>Якщо ви особа з інвалідністю, або у вас є особливі потреби, ви можете звернутися
+                            безпосередньо до суду і дізнатися які умови доступності має приміщення суду, наприклад
+                            доступ до вбиральні. За більш детальною інформацією ви може звернутися безпосередньо до
+                            суду. Контактна інформація доступна на <a href="https://court.gov.ua/" target="_blank"
+                                                                      rel="noopener"> офіційному сайті Судової влади
+                                України</a>.</p>
+                    </details>
+                    <details class="primary square">
+                        <summary><strong>Якщо Вас викликають до суду в Ваш робочий час</strong></summary>
+                        <p>Якщо ви ще не повідомили свого роботодавця про те, що вам потрібний відгул або відпроситися
+                            на декілька годин, зробіть це як найшвидше. Ваш роботодавець повинен дозволити вам виконати
+                            обов'язок свідка і виплатити вам середню зарплату за той час, коли ви були відсутні на
+                            робочому місці. Ви також можете отримати відшкодування витрат. <a
+                                    href="witness-advice.html#compensation">За цим посиланням Ви зможете дізнатися
+                                більше</a>.</p>
+                        <p>Якщо ваш роботодавець відмовляється відпустити вас, повідомте про це слідчому, прокурору або
+                            адвокату сторони захисту (тому, хто викликав вас давати свідчення) і/або суду. Суд може
+                            видати «повістку про виклик до суду», яку ви можете показати своєму роботодавцю і
+                            підтвердити в який саме час ви маєте бути в суді. Після засідання суду, секретар суду може
+                            видати вам підтверджуючий документ, в якому буде зазначено час вашого перебування в суді.
+                            Роботодавцю забороняється відмовляти вам у виконанні повістки.</p>
+                    </details>
+                    <details class="default square">
+                        <summary><strong>Пілотний проект надання підтримки свідкам</strong></summary>
+                        <p>За підтримки Шевченківського районного суду, Львівської обласної прокуратури та місцевих
+                            університетів, Консультативна місія Європейського Союзу реалізує Пілотний проект «Служба
+                            підтримки свідків».</p>
+                        <p>В цій службі працюють волонтери, які пропонують надання особистої допомоги та практичних
+                            консультацій свідкам перед тим як вони будуть давати свідчення. Якщо суд, до якого вас
+                            викликали давати свідчення, має службу підтримки свідків, ви отримаєте про це інформацію
+                            разом із викликом до суду. Також, будь-ласка, прогляньте відповідні розділи цього сайту, щоб
+                            дізнатися більше інформації про Пілотний проект «Служба підтримки свідків».</p>
+                    </details>
+                </div><!-- /acc_container -->
+            </div> <!-- /blog-item -->
+        </div> <!-- /blog-home -->
+    </div> <!-- /container -->
+</section> <!-- /whois section -->
 
 <!-- form section -->
 
-	<section class="formsection" onclick="mobMenuUncheck();">
-		<div class="container">
-			<div class="ask-legal-clinic">
-				<h1>Contact form to the Free Legal Clinic</h1>
-			</div>
-			<form action="" class="grid">
-				<div><input type="text" name='name' placeholder="Your name is..." required></div>
-				<div><input type="text" name='name' placeholder="Your email is..."></div>
-				<div><input type="text" name='name' placeholder="Your phone No is..."></div>
-				<div><button class="button">Send Email</button></div>
-			</form>
-		</div>
-	</section>
+<section class="formsection" onclick="mobMenuUncheck();">
+    <div class="container">
+        <div class="ask-legal-clinic">
+            <h1>Контактна форма безоплатної правової допомоги</h1>
+        </div>
+        <form action="" class="grid">
+            <div><input type="text" name='name' placeholder="Ваше ім'я..." required></div>
+            <div><input type="text" name='name' placeholder="Ваш email ..."></div>
+            <div><input type="text" name='name' placeholder="Ваш No телефону..."></div>
+            <div>
+                <button class="button">Надіслати Email</button>
+            </div>
+        </form>
+    </div>
+</section>
 
 
 <!-- trial day section -->
 
-	<section class="protection-section landing-section" onclick="mobMenuUncheck();" id="trial-day">
-		<div class="container grid">
-			<div class="protection-left">
-				<h2>
-					The Day of the Trial
-				</h2>
-				<h3>
-					Reporting your attendance.
-				</h3>
-				<p>You may also want to consult the section “<a href="https://prosvidok.info/en/before-court/">Before the court</a>“.</p>
-				<p>At the time specified in the summons you have to report your attendance to the court secretary. For these purposes you will have to come to the court 10-15 minutes in advance, find the courtroom or the secretary of the judge and present them your ID (preferably your internal passport).</p>
-				<p><strong>Please do not forget to bring ID to the court.</strong></p>
-				<p>Plan more time if there are matters of concern which you would like to address before the trial. In some courts, a witness support service is facilitated by volunteers, who are there to help you. These witness support volunteers will usually wear vests. In courts where there is no such facility, contact the court staff directly.</p>
-				<p>In order to get to your hearing on time, please make sure you know the location of the court and have factored in travel time on public transport or parking. If you come after the beginning of the court hearing, the secretary will not be able to come out of the courtroom, because they are responsible for the record and stay in the courtroom all the time. Consequently, your presence in the courtroom may not be known to the judge and the other participants in the trial.</p>
-				<p>If you are lost in the court and cannot find the appropriate secretary or the courtroom, do not hesitate to contact the chancellery or any other officer of the court, they will show you the right way.</p>
-				<h3>After you have reported your attendance.</h3>
-				<p>You must remain in the witness room for the courtroom where you are due to appear or in its immediate vicinity until you are called. It can take a considerable time before you are called to testify. You will need to wait however because your testimony can be very important. To be ready for such events, please consult the ‘Before the trial’ section of this Website.</p>
-				<p>Do not speak with the other witnesses, especially with those who have already given evidence, because it may harm the credibility of your testimony.</p>
-				<p>It would be prudent to bring  a bottle of water,  a snack and medication which you have to take at regular times with you. Usually courts have a lunch time breaks, during which you will be able to get out of the court. However, it can happen that the court hearing cannot be interrupted for some reasons, in which case you have to notify the officer of the court (secretary or assistant to the judge) that you need to have a lunch and will get back after that as soon as possible.</p>
-				<h3>What will happen when you give evidence?</h3>
-				<p>You will be called to the room by the secretary, defence counsel or prosecutor, mobile phones will have to be turned off when you are giving evidence. When you go into the courtroom you will be asked to stand in the witness designated area. The judge will ask your name, where you live and check your ID for the record.</p>
-				<p>Then, you will be ‘sworn in’ in this way: “I, (surname, name, patronymic), swear to tell the court the truth and only the truth.” This means you agree to tell the truth and it is a criminal offence if you do not. The judge will explain you your rights and obligations as well as the liability for refusal to testify or for perjury. You do not have to remember what to say when you are sworn in – you will be given a card with the words on it, you will pronounce it and sign.</p>
-				<p>It can also be the case that a court secretary will give you the text of the oath and list of your rights and obligations before the judge comes into the courtroom, to make you acquainted with them and sign. In such event, the judge will anyway make sure you sworn in, acquainted with your rights and obligations and sighed the acknowledgment.</p>
-				<p>The accused will be present in the courtroom when you give evidence. If you feel afraid about this, you may apply to the court before the trial begins to be questioned in separate premises with the use of technical equipment and change of your voice. This is to make sure that parties can still ask you questions but cannot identify you. You have to apply to the court for this in writing well in advance of the court hearing.</p>
-				<p>The public may attend the trial unless it is a hearing closed to the public.</p>
-				<h3>If you find it difficult to stand in the witness box</h3>
-				<p>You will normally have to stand while you are giving your testimony. If you find it difficult, inform the judge about that and the judge may let you be seated while testifying.</p>
-				<h3>Some rules to assist witness:</h3>
-				<p>The court is required to monitor the conduct of questioning of witnesses in order to protect witnesses from abuse, prevent violations of the rules of interrogation and use time efficiently. In any case, do not argue with the parties, and ask the judge if you are uncertain about anything or you have any issues. Also, you should not argue with the judge.</p>
-				<ul>
-					<li><strong>You must tell the truth.</strong> False testimony can result in innocent person’s conviction. False testimony is a crime.</li>
-					<li><strong>You must listen the questions to the end.</strong> Do not start replying, until a lawyer asks you the question in full and you understand it.</li>
-					<li><strong>Tell the prosecutor/defence counsel/judge if you do not understand the question</strong>. Sometimes questions can be difficult for understanding and you can ask to rephrase the question in a way easier for you to understand.</li>
-					<li><strong>It is OK if you do not remember</strong>. It is better to say this honestly, rather than making up the answer. Experienced lawyers will see it and it can negatively affect the credibility of your testimony.</li>
-					<li><strong>It is OK if you do not know the answer</strong>. Say that you do not know, do not try to guess the ‘right answer’.</li>
-				</ul>
-			</div>
-			<div class="protection-right">
-				<ul>
-					<li><strong>You can ask for a break.</strong> If you feel upset or tired it is a good idea to ask for a break.</li>
-					<li><strong>You can correct the prosecutor/defence counsel.</strong> Lawyers can make suggestions and theories and ask whether it was truth or not. You have to say if you disagree with them.</li>
-					<li><strong>You have to answer ALL questions.</strong> There can be questions that you do not want to answer or do not understand why they matter for the case, but you have to answer all the questions, unless judge rules otherwise. Refusal is a criminal offence (except right in Art. 63 of Constitution).</li>
-					<li><strong>Never discuss your testimony in advance (except with your lawyer)</strong>. Especially not with other witnesses (even if they are relatives), because this can affect their testimony and may even result in criminal liability for undue influence on witnesses.</li>
-				</ul>
-				<h3>General tips for giving testimony.</h3>
-					<ul>
-						<li>Sometimes you may be asked the same question more than once. It doesn’t mean that you have given a wrong answer. The defence counsels just need to clarify what you are saying.</li>
-						<li>If you do not hear a question properly it is OK to ask the lawyers to repeat the question.</li>
-						<li>Take your time to answer the questions. There is no time limit so it is OK to think about your answers.</li>
-						<li>Sometimes the lawyer asking the questions may have a firm voice. However, just remember you are not in any trouble and no one is angry with you.</li>
-						<li>If you are feeling nervous or upset it may help to take some deep breaths. That is why it would be a good idea to have a bottle of water and tissues with you.</li>
-						<li>When some people get nervous their voice can be very quiet. If the court is having trouble hearing your answers they may ask you to speak louder. No one is angry with you but it is important that everyone can hear your answers.</li>
-						<li>You have to address the judge as “Your Honour”.</li>
-						<li>When judges come into or leave the courtroom everybody has to rise. During the public announcement of the court judgement, everybody stands, including judges themselves. You will have to rise when you want to address the court, or when the court addresses you in any way. Also, you will have to testify standing and the person questioning you also have to stand. These rules do not apply to you only if the judge permits you to remain seated.</li>
-					</ul>
-					<h3>Direct examination, cross-examination, questions from all other participants</h3>
-					<p>First, the prosecutor or the defence counsel representing the side which asked you to give evidence will start asking you questions. This is called direct examination and leading questions (questions with the answer in it) are prohibited.</p>
-					<p>After direct examination, the possibility of cross-examination of the witness is provided to the other party. Here you can be asked leading questions and you can correct those questions in the part that you disagree with.</p>
-					<p>After examination of a witness, questions may be asked to him by the offended party, the civil plaintiff, the civil defendant, their representatives and legal representatives (litigation friends), the representative of the legal entity against which the proceedings are conducted.</p>
-					<p>During the examination, judge can on the protest of the party remove questions that are not related to the essence of the criminal proceedings. Judge also can interrupt you at any given moment to clarify the details. Also, if this is not clear whether you agree or not with some suggestions of lawyers, the judge can direct you to answer only ‘yes’ or ‘no’ to particular question.</p>
-					<h3>When you are asked questions by the other side</h3>
-					<p>After you have given evidence for the party which called you as a witness, you will be asked questions by the other party. This is called cross-examination.</p>
-					<p>It’s their job to try to present a different version of events. It can be stressful but just tell the court what happened to you or what your saw in your own words. If you do not understand a question, feel upset by their questions or feel unwell, you should say so. The judge might let you have a break before you carry on. You can ask for a drink of water or a tissue if you need one.</p>
-					<h3>After you have testified</h3>
-					<p>After you have testified, tell the judge if you want to leave, because the judge will have to make sure that you do not communicate with any other witnesses not questioned yet. If there are discrepancies in the testimonies, there may be a need to talk to you or the other witnesses again.</p>
-					<p>In any other case, you may stay for the rest of the trial if you wish to. To find out more, <a href="https://prosvidok.info/en/after-trial/">go to this section</a>.</p>
-					<h3>Staying in the court building</h3>
-					<p>If you want to leave the court building, for example to get some fresh air, you should ask the court officer (secretary or the assistant to the judge) and they will pass on your request to the judge.</p>
-					<p>The court officer can ask you where you are going and how you can be contacted. You should not go too far away in case you are needed back at short notice.</p>
-					<p>In case you need the assistance of witness support, they will also be available to you after you have testified.</p>
-					<p>You can stay for the rest of the trial and hear the verdict, if you wish to. What remains will be any other witness statements, the presentation of written evidence and the closing statements of the prosecutor (and prosecution party – victim, her/his counsel etc) and the defence counsel and the last word of the defendant. The verdict will be delivered straight after the last word of the defendant, judge(s) will go to the deliberation room. The judgment will be publicly announced either shortly after the conclusion of the trial or by the time indicated by the judge.</p>
+<section class="protection-section landing-section" onclick="mobMenuUncheck();" id="trial-day">
+    <div class="container grid">
+        <div class="protection-left">
+            <h2>
+                День судового засідання
+            </h2>
+            <h3>
+                Повідомити про прибуття до суду.
+            </h3>
+            <p>Можливо, вам також буде цікаво ознайомитися з розділом “<a href="#before-court">перед судом</a> вище“.
+            </p>
+            <p>В повістці вказаний час, коли ви маєте повідомити секретаря суду про своє прибуття. Для цього, необхідно
+                прибути до суду за 10-15 хвилин до вказаного часу, знайти зал судового засідання або секретаря судді та
+                показати йому документ, що посвідчує особу (бажано паспорт громадянина України). </p>
+            <p><strong>Будь ласка, не забувайте брати з собою документ, що посвідчує особу, коли йдете до суду.Please do
+                not forget to bring ID to the court.</strong></p>
+            <p>Якщо у вас є питання або справи які ви хотіли б владнати до судового засідання, прибудьте до суду раніше.
+                В деяких судах, в службі підтримки свідків працюють волонтери, які можуть вам допомогти. Зазвичай,
+                волонтерів, які надають підтримку свідкам, можна впізнати за відповідними жилетами. В тих судах де немає
+                служби підтримки свідків, ви можете звернутися безпосередньо до працівників суду. </p>
+            <p>Для того щоб прийти на засідання вчасно, переконайтеся що ви знаєте де знаходиться суд, також врахуйте
+                час, необхідний на дорогу до суду громадським транспортом або на пошук стоянки для автомобіля. Якщо ви
+                прибули до суду, а засідання вже почалося, секретар не зможе вийти із зали судового засідання, оскільки
+                до його обов'язків входить ведення протоколу засідання і безперервне перебування в залі засідання суду.
+                Отже, судді та інші учасники судового процесу, які знаходяться в залі судового засідання, не знатимуть
+                про ваше прибуття.</p>
+            <p>Якщо ви загубилися в приміщенні суду і не можете знайти відповідного секретаря або відповідну залу
+                судового засідання, зверніться по допомогу до канцелярії або будь-якого іншого працівника суду.</p>
+            <h3>Після того, як ви повідомили про своє прибуття</h3>
+            <p>Ви повинні залишатися в кімнаті для свідків прилеглій до зали судового засідання, в якій ви маєте давати
+                свідчення, або безпосередньо біля зали судового засідання і очікувати на запрошення до зали для надання
+                свідчень. Іноді чекати доводиться довго. Однак, вам доведеться чекати, оскільки ваші свідчення можуть
+                бути дуже важливими. Щоб бути готовим, ознайомтеся з інформацією, яка викладена в
+                <a href="#before-court">розділі «До судового засідання»</a> вище.</p>
+            <p>Не розмовляйте з іншими свідками, особливо з тими, які вже дали свідчення, тому що це може вплинути на
+                надійність ваших свідчень.</p>
+            <p>Корисно мати із собою пляшку води, легку їжу, та ліки, які ви регулярно приймаєте. Зазвичай в судах також
+                є обідня перерва під час якої ви можете вийти із приміщення суду. Однак, бувають випадки, коли з певних
+                причин засідання суду не переривається. За таких обставин ви маєте повідомити працівника суду (секретаря
+                або помічника судді), що вам потрібна перерва на обід і що ви повернетеся до зали суду якомога
+                швидше.</p>
+            <h3>Що відбувається, коли ви даєте свідчення?</h3>
+            <p>Секретар, захисник або прокурор запрошує вас до зали судового засідання. Коли ви даєте свідчення,
+                необхідно вимкнути свій мобільний телефон. Коли ви зайдете до зали судового засідання, вас попросять
+                стати біля кафедри для свідків. Суддя, для протоколу, попросить вас назвати ваше ім'я, місце проживання
+                та перевірить документ, який посвідчує вашу особу.</p>
+            <p>Потім, вас приведуть до присяги таким чином: «Я, (прізвище, ім'я, по-батькові), присягаю говорити суду
+                правду і лише правду» Це означає, що ви погодилися казати правду, і порушення присяги тягне за собою
+                кримінальну відповідальність. Суддя пояснить вам ваші права та обов'язки, а також відповідальність за
+                відмову давати свідчення або за надання неправдивих свідчень. Вам не треба запам'ятовувати слова
+                присяги. Ви отримаєте аркуш паперу із текстом присяги, вам необхідно його зачитати та поставити підпис
+                під текстом на аркуші.</p>
+            <p>Також, секретар суду може дати вам текст присяги і перелік ваших прав та обов'язків ще до того як суддя
+                зайде до зали судового засідання, для того щоб ви могли ознайомитися з цією інформацією та поставити
+                підпис. В такому випадку суддя все одно переконається що ви склали присягу, ознайомилися зі своїми
+                правами та обов'язками і підписали розписку про ознайомлення.</p>
+            <p>Коли ви даєте свідчення, обвинувачувана особа знаходиться в залі судового засідання. Якщо вам страшно
+                давати свідчення в залі судового засідання, ви можете звернутися до суду до початку судового засідання і
+                попросити про проведення допиту в окремому приміщенні з використанням обладнання, яке може змінити
+                звучання вашого голосу. Це робиться для того, щоб сторони могли ставити вам питання, але не могли вас
+                впізнати. З таким проханням треба звертатися до суду в письмовій формі заздалегідь, до початку судового
+                засідання.</p>
+            <p>В залі також можуть бути присутні глядачі, окрім тих випадків, коли проводиться закрите слухання.</p>
+            <h3>Якщо вам важко стояти біля кафедри для свідків</h3>
+            <p>Зазвичай ви маєте стояти під час давання свідчень. Якщо вам важко, повідомте про це суддю, він може
+                дозволити вам сидіти під час давання свідчень.</p>
+            <h3>Деякі правила, які можуть стати в пригоді свідкам:</h3>
+            <p>Суд зобов'язаний спостерігати за проведенням допиту свідка, з метою захисту свідка від зловживання,
+                попереджування порушення правил проведення допиту і нагляду за раціональним використанням часу. За
+                будь-яких обставин не вступайте в суперечки зі сторонами, і якщо ви в чомусь не впевнені, або
+                сумніваєтесь зверніться до судді. Також ви не повинні сперечатися із суддею.</p>
+            <ul>
+                <li><strong>Ви зобов'язані казати правду.</strong> Неправдиві свідчення можуть стати причиною ув'язнення
+                    невинної особи. Давання неправдивих свідчень є злочином
+                </li>
+                <li><strong>Ви маєте дослухати питання до кінця.</strong> Не починайте відповідати на питання поки юрист
+                    не завершить питання, і поки ви його повністю не зрозумієте.
+                </li>
+                <li><strong>Якщо ви не розумієте питання, скажіть про це прокурору/захиснику/судді.</strong>. Іноді
+                    питання важко зрозуміти, ви можете попросити його перефразувати, щоб вам було легше його зрозуміти.
+                </li>
+                <li><strong>Не страшно, якщо ви чогось не пам'ятаєте</strong>. Краще чесно про це сказати, ніж
+                    вигадувати відповідь. Досвідчені юристи це помітять, що може негативно вплинути на надійність ваших
+                    свідчень.
+                </li>
+                <li><strong>Не лякайтеся, якщо ви не можете відповісти на питання.</strong> Скажіть, що ви не знаєте. Не
+                    намагайтеся вгадати «правильну відповідь».
+                </li>
+            </ul>
+        </div>
+        <div class="protection-right">
+            <ul>
+                <li><strong>Ви можете попросити зробити перерву. </strong> Якщо ви стурбовані, нервуєте або втомилися,
+                    краще попросити зробити перерву.
+                </li>
+                <li><strong>Ви можете поправляти прокурора/захисника.</strong> Юрист може робити припущення або
+                    висловлювати теорії і питати вас правда це чи ні. Ви маєте сказати, якщо не погоджуєтеся з ним.
+                </li>
+                <li><strong>Ви повинні дати відповідь на всі запитання.</strong> Вам можуть ставити питання на які ви не
+                    хочете відповідати, або ви не розумієте яким чином це питання стосується справи. Однак, ви повинні
+                    відповісти на кожне питання, окрім випадків коли суддя приймає рішення, що ви можете не відповідати.
+                    Відмова від відповіді є кримінальним правопорушенням (окрім прав, гарантованих статтею 63
+                    Конституції України).
+                </li>
+                <li><strong> Ніколи ні з ким не обговорюйте заздалегідь свої свідчення (окрім, свого
+                    захисника). </strong> Особливо це стосується інших свідків (навіть якщо це ваші родичі), оскільки ви
+                    можете вплинути на їхні свідчення, що, в свою чергу, може призвести до притягнення вас до
+                    кримінальної відповідальності за незаконний вплив на свідка.
+                </li>
+            </ul>
+            <h3>Загальні поради свідкам</h3>
+            <ul>
+                <li>Інколи вам можуть поставити одне й те саме питання декілька разів. Це не означає, що ви неправильно
+                    відповіли. Захисник тільки лише уточнює те, що ви кажете.
+                </li>
+                <li>Якщо ви не розчули питання, попросіть юриста повторити його.</li>
+                <li>Не поспішайте з відповіддю. Немає жодних обмежень в часі, тому ви можете спокійно обміркувати свою
+                    відповідь.
+                </li>
+                <li>Іноді голос юриста, який ставить вам питання, звучить жорстко, однак пам'ятайте, що все нормально,
+                    він не свариться на вас.
+                </li>
+                <li>Якщо ви нервуєте або стурбовані, спробуйте зробити декілька глибоких вдихів та повільних видихів.
+                    Буде добре, якщо ви матимете з собою пляшку води та серветки.
+                </li>
+                <li>Деякі люди, коли нервують, говорять дуже тихо. Тому, якщо суд вас погано чує, вас попросять говорити
+                    гучніше. Це не означає, що хтось на вас сердиться, просто дуже важливо, щоб всі чули ваші відповіді.
+                </li>
+                <li>До судді ви маєте звертатися словами «Ваша честь».</li>
+                <li>Коли судді заходять або виходять із зали судового засідання, всі повинні встати. Під час оголошення
+                    вироку суду, всі повинні стояти, навіть судді. Коли ви звертаєтеся до суду, або коли суд до вас
+                    звертається у будь-який спосіб, ви повинні встати. Також, ви повинні стояти, коли даєте свідчення,
+                    як і особа, яка ставить вам питання. Ви можете давати свідчення сидячі, тільки якщо суддя вам
+                    дозволив.
+                </li>
+                <li>Ви повинні давати свідчення усно. Ви не можете прочитати записи, які ви, можливо, принесли із собою.
+                    Однак, ви можете сказати судді, що ви занотували деякі цифри або іншу інформацію, яку вам важко
+                    тримати в голові, і попросити дозволу використовувати свої нотатки, як довідку.
+                </li>
+            </ul>
+            <h3>Прямий допит, перехресний допит, питання від інших учасників процесу</h3>
+            <p>Спочатку прокурор або захисник, представник тієї сторони яка викликала вас для надання свідчень, почне
+                ставити вам запитання. Це називається прямий допит. Під час прямого допиту не дозволяється ставити
+                навідні запитання (тобто запитання, які містять відповідь).</p>
+            <p>Після прямого допиту, іншій стороні надається можливість провести перехресний допит. Під час перехресного
+                допиту дозволяється ставити навідні питання. Ці питання ви можете коригувати, якщо не згодні з якоюсь
+                їхньою частиною.</p>
+            <p>Після прямого допиту, іншій стороні надається можливість провести перехресний допит. Під час перехресного
+                допиту дозволяється ставити навідні питання. Ці питання ви можете коригувати, якщо не згодні з якоюсь
+                їхньою частиною.
+                Після допиту свідка наступні особи можуть поставити йому запитання: потерпілий, цивільний позивач,
+                цивільний відповідач, їх представники та законні представники, представник юридичної особи, щодо якої
+                здійснюється провадження.
+            </p>
+            <p> Під час допиту свідка суддя, за протестом сторони, може зняти питання, які не стосуються суті
+                кримінального провадження. Суддя, також, може перервати вас в будь-який момент, щоб з'ясувати певне
+                питання. Також, якщо із вашої відповіді не зрозуміло, погоджуєтеся ви з припущеннями юриста чи ні, суддя
+                може попросити вас дати конкретну відповідь «так» або «ні».</p>
+            <h3>Коли вам ставить питання інша сторона</h3>
+            <p>Після того, як ви дали свідчення стороні, яка вас викликала до суду як свідка, вам почне ставити
+                запитання представник іншої сторони. Це називається перехресний допит.</p>
+            <p>Його завдання полягає саме в тому, щоб представити іншу версію перебігу подій. Такий допит може бути
+                досить напруженим і ви можете відчувати занепокоєння, просто розкажіть суду своїми словами що з вами
+                сталося або що ви бачили. Якщо ви не розумієте питання, почуваєтеся стурбовано через запитання або вам
+                погано, обов'язково скажіть про це. Суд може дозволити вам зробити перерву, перш ніж продовжувати допит.
+                Якщо потрібно, ви можете попросити води або серветку.</p>
+            <h3>Після надання свідчень</h3>
+            <p>Після того як ви завершили давати свідчення, повідомте суддю, якщо ви хочете піти, оскільки суддя
+                зобов'язаний переконатися, що ви не будете спілкуватися з іншими свідками, яких ще не допитували. Якщо в
+                деяких свідченнях є розбіжності, можливо, пізніше, буде необхідно знову поговорити з вами або іншими
+                свідками.</p>
+            <p>Також, ви можете залишитися в залі суду до кінця судового засідання. Щоб дізнатися більше, <a
+                    href="#after-trial">зверніться до розділу нижче</a>.</p>
+            <h3>Перебування в приміщенні суду</h3>
+            <p>Якщо ви хочете вийти із будівлі, в якій знаходиться суд, наприклад щоб подихати свіжим повітрям, ви
+                зобов'язані звернутися до працівника суду (секретаря або помічника судді), який передасть ваше прохання
+                судді.</p>
+            <p>Працівник суду може запитати у вас куди ви йдете та як з вами можна буде зв'язатися. Ви не повинні
+                відходити далеко, на той випадок якщо вас попросять негайно повернутися.</p>
+            <p>Якщо вам буде потрібна допомога служби підтримки свідків, працівники служби зможуть її вам надати після
+                того як ви дали свідчення.</p>
+            <p>Також, якщо ви хочете, ви можете залишитися в залі суду до кінця судового засідання і заслухати рішення
+                суду. Тобто, ви можете бути присутніми під час допиту інших свідків, проведення дослідження письмових
+                доказів, та виступів прокурора в судових дебатах (та сторони обвинувачення - потерпілого, його/її
+                захисника, та ін.) і захисника та останнього слова обвинувачуваного. Рішення суду буде прийняте одразу
+                після останнього слова обвинувачуваного. Для цього судді пройдуть до нарадчої кімнати. Рішення суду
+                оголошується або одразу після завершення судового засідання, або у час, який визначить суддя.</p>
 
-			</div>
-		</div>
-	</section> <!-- /trial day section -->
-
+        </div>
+    </div>
+</section> <!-- /trial day section -->
 
 
 <!-- links section -->
 
-    <section class="bootstrap ftco-section bg-light" onclick="mobMenuUncheck();">
-    	<div class="container grid">
-            <div class="row justify-content-center pb-3">
-              <div class="col-md-7 text-center heading-section ftco-animate">
-              	<h1 class="mb-4">Quick links</h1>
-              </div>
+<section class="bootstrap ftco-section bg-light" onclick="mobMenuUncheck();">
+    <div class="container grid">
+        <div class="row justify-content-center pb-3">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h1 class="mb-4">Корисні посилання</h1>
             </div>
-	        <div class="row d-flex justify-content-center">
-	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-	        		<div class="practice-area">
-	        			<div class="icon d-flex justify-content-center align-items-center">
-	        				<span class="flaticon-handcuffs"></span>
-	        			</div>
-	        			<h3><a href="#">Crime info</a></h3>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-	        		<div class="practice-area ftco-animate">
-	        			<div class="icon d-flex justify-content-center align-items-center">
-	        				<span class="flaticon-auction"></span>
-	        			</div>
-	        			<h3><a href="#">Going to the court</a></h3>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-	        		<div class="practice-area ftco-animate">
-	        			<div class="icon d-flex justify-content-center align-items-center">
-	        				<span class="flaticon-shield"></span>
-	        			</div>
-	        			<h3><a href="#">Witness protection</a></h3>
-	        		</div>
-	        	</div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-handcuffs"></span>
+                    </div>
+                    <h3><a href="index.html#crime-info" class="crime-info">Інфо про злочин</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-auction"></span>
+                    </div>
+                    <h3><a href="#trial-day">Як поводитися в суді</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-shield"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#protection">Захист свідків</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-employee"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#rights-obligations">Поради свідкам</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-money"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#compensation">Як отримати компенсацію</a></h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-2 col-sm-6 text-center">
+                <div class="practice-area ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-lawyer"></span>
+                    </div>
+                    <h3><a href="witness-advice.html#free-legal-aid">Безоплатна правова допомога</a></h3>
+                </div>
+            </div>
 
-	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-	        		<div class="practice-area ftco-animate">
-	        			<div class="icon d-flex justify-content-center align-items-center">
-	        				<span class="flaticon-employee"></span>
-	        			</div>
-	        			<h3><a href="#">Witness advice</a></h3>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-	        		<div class="practice-area ftco-animate">
-	        			<div class="icon d-flex justify-content-center align-items-center">
-	        				<span class="flaticon-money"></span>
-	        			</div>
-	        			<h3><a href="#">How to get compensated</a></h3>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-3 col-lg-2 col-sm-6 text-center">
-	        		<div class="practice-area ftco-animate">
-	        			<div class="icon d-flex justify-content-center align-items-center">
-	        				<span class="flaticon-lawyer"></span>
-	        			</div>
-	        			<h3><a href="#">Free Legal Aid</a></h3>
-	        		</div>
-	        	</div>
-
-        	</div>
-    	</div>
-    </section> <!-- /links section -->
+        </div>
+    </div>
+</section>
 
 
 <!-- summons section -->
-	<section class="landing-section section-blog crime" onclick="mobMenuUncheck();">
-		<div class="container">
-			<h2>After trial</h2>
-			<div class="blog-home grid">
-				<div class="blog-item grid summons">
-					<h3>How to find out the outcome of the case.</h3>
-					<p>All court judgments are available online at the <a href="http://www.reyestr.court.gov.ua/" target="_blank" rel="noopener">Unified Registry of Court Judgments</a> for some time after their announcement (usually up to 3 weeks). For the easiest access you will need to know the court case number.</p>
-					<p>Also you can find out the court decision using the <a href="https://court.gov.ua/fair" target="_blank" rel="noopener">Judiciary Website Service</a>. There you can enter the name of the party and find out the stage of the case and if you click on the case, you will be able to go to the Unified Registry of Court Judgement online.</p>
-				</div>
-				<div class="blog-item grid summons">
-					<span class="blog-item-img" style='background-image: url(img/desk.jpg)'></span>
-				</div>
-				<div class="blog-item grid summons">
-					<span class="blog-item-img" style='background-image: url(img/hammer2.jpg)'></span>
-				</div>
-				<div class="blog-item grid summons">
-					<h3>What happens if there’s an appeal</h3>
-					<p>If there is an appeal against the court judgement, it is very unlikely that you will have to testify again, although it is still possible. The case can also be resent to the court of the first instance where judges have to start all the procedures afresh.</p>
-					<p>If you do have to go back to court, there you can be either asked to provide your testimony all over again or to clarify only some particular matters. In any case, the procedure usually remains the same as described in other sections of this website.</p>
-				</div>
-			</div>
-		</div>
-	</section> <!-- /summons section -->
+<section class="landing-section section-blog crime" onclick="mobMenuUncheck();">
+    <div class="container" id="after-trial">
+        <h2>Після суду</h2>
+        <div class="blog-home grid">
+            <div class="blog-item grid summons">
+                <h3>Як дізнатися про результат судового розгляду справи.</h3>
+                <p>Всі рішення суду викладаються для загального доступу на сайті <a
+                        href="http://www.reyestr.court.gov.ua/"
+                        target="_blank" rel="noopener">Єдиного реєстру судових рішень</a> після їх оголошення (зазвичай
+                    протягом 3 тижнів). Якщо ви знаєте номер справи, то ви дуже легко зможете знайти рішення.</p>
+                <p>Також ви можете віднайти рішення, скориставшись <a href="https://court.gov.ua/fair"
+                                                                      target="_blank" rel="noopener">сайтом Судової
+                    влади України</a>Коли ви введете прізвище сторони по справі, ви зможете побачити на якому етапі
+                    знаходиться розгляд справи. Якщо натиснути на саму справу, ви перейдете на сторінку Єдиного реєстру
+                    судових рішень.</p>
+            </div>
+            <div class="blog-item grid summons">
+                <span class="blog-item-img" style='background-image: url(img/desk.jpg)'></span>
+            </div>
+            <div class="blog-item grid summons">
+                <span class="blog-item-img" style='background-image: url(img/hammer2.jpg)'></span>
+            </div>
+            <div class="blog-item grid summons">
+                <h3>Якщо буде апеляційне провадження</h3>
+                <p>Якщо буде подана апеляційна скарга на рішення суду, навряд чи вас знову викличуть для допиту, однак,
+                    це можливо. Також справа може бути направлена до суду першої інстанції, тоді суддям доведеться
+                    проводити всі етапи судового розгляду наново.</p>
+                <p>Якщо вам доведеться повернутися до суду, вас можуть попросити знову дати свідчення, або дати
+                    відповідь лише на деякі питання. В будь-якому випадку порядок дій буде таким самим, як описано в
+                    інших розділах цього сайту.</p>
+            </div>
+        </div>
+    </div>
+</section> <!-- /summons section -->
 
 
-	<footer class="sponsor-footer" onclick="mobMenuUncheck();">
-		<div class="container">
-			<h2>This Project is supported by:</h2>
-				<section class="customer-logos slider bootstrap">
-			    	<div class="slide"><img src="img/EUAM_logo.png"><a href="http://www.euam-ukraine.eu/">European Union Advisory Mission in Ukraine</a></div>
-			    	<div class="slide"><img src="img/Emblem_PPO.png"><a href="https://lviv.gp.gov.ua/ua/index.html">Lviv Regional Prosecution Office</a></div>
-			    	<div class="slide"><img src="img/UA_logo.png"> <a href="https://sh.lv.court.gov.ua/sud1328/">Shevchenkivskyi Court of Lviv City</a></div>
-			    	<div class="slide"><img src="img/Logo_LVDUVS.png"><a href="http://www.lvduvs.edu.ua/">Lviv State University of Internal Affairs</a></div>
-			    	<div class="slide"><img src="img/lnu-logo.jpg"><a href="https://www.lnu.edu.ua/">Ivan Franko National University of Lviv</a></div>
-			    	<div class="slide"><img src="img/police.png"><a href="https://www.lnu.edu.ua/">Lviv Regional Main Department of National Police</a></div>
-			    </section>
-		</div>
-	</footer>
+<!-- footer -->
+<footer class="sponsor-footer" onclick="mobMenuUncheck();">
+    <div class="container">
+        <h2>Проект впроваджується за підтримки:</h2>
+        <section class="customer-logos slider bootstrap">
+            <div class="slide"><img src="img/EUAM_logo.png"><a href="http://www.euam-ukraine.eu/">Консультативна Місія Європейського Союзу в Україні</a></div>
+            <div class="slide"><img src="img/Emblem_PPO.png"><a href="https://lviv.gp.gov.ua/ua/index.html">Львівська обласна прокуратура</a></div>
+            <div class="slide"><img src="img/UA_logo.png"> <a href="https://sh.lv.court.gov.ua/sud1328/">Шевченківський районний суд міста Львова</a></div>
+            <div class="slide"><img src="img/Logo_LVDUVS.png"><a href="http://www.lvduvs.edu.ua/">Львівський державний університет внутрішніх справ</a></div>
+            <div class="slide"><img src="img/lnu-logo.jpg"><a href="https://www.lnu.edu.ua/">Львівський національний університет імені Івана Франка</a></div>
+            <div class="slide"><img src="img/police.png"><a href="https://www.lnu.edu.ua/">Головне управління Національної поліції у Львівській області</a></div>
+        </section>
+    </div>
+</footer>
 
 
+<!-- lower footer -->
+<footer class="lower-footer" onclick="mobMenuUncheck();">
+    <div class="container">
+        <div class="footer-copy">Всі права захищені. КМЄС України ©</div>
+    </div>
+</footer>
 
-	<footer class="lower-footer" onclick="mobMenuUncheck();">
-		<div class="container">
-			<div class="footer-copy">All rights reserved. EUAM Ukraine ©</div>
-		</div>
-	</footer>
 
+<!-- CSS and JS -->
+<link rel="stylesheet" href="css/advice.min.css">
+<script src="js/scripts.min.js"></script>
+<script src="js/script.js"></script>
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/mob_menu.css">
 
+<!-- icon fonts -->
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/flaticon.css">
 
-	<!-- CSS and JS -->
-	<link rel="stylesheet" href="css/advice.min.css">
-	<script src="js/scripts.min.js"></script>
-	<script src="js/script.js"></script>
-	<link rel="stylesheet" href="css/animation.css">
-	<link rel="stylesheet" href="css/mob_menu.css">
+<!-- slider styles and js -->
+<script src="libs/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="js/slick.js"></script>
+<link rel="stylesheet" href="css/iso_bootstrap4.1.0min.css">
+<script src="js/slider.js"></script>
 
-	<!-- icon fonts -->
-	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/flaticon.css">
-
-	<!-- slider styles and js -->
-	<script src="libs/jquery/dist/jquery.min.js" type="text/javascript"></script>
-	<script src="js/slick.js"></script>
-	<link rel="stylesheet" href="css/iso_bootstrap4.1.0min.css">
-	<script src="js/slider.js"></script>
-
-	<!-- accordion -->
-	<link rel="stylesheet" href="css/accordion.min.css">
+<!-- accordion -->
+<link rel="stylesheet" href="css/accordion.min.css">
 <!--	<script src="js/accordeon.js"></script>-->
 
-	<!-- scroll js -->
-	<script src="js/scroll.js"></script>
+<!-- scroll js -->
+<script src="js/scroll.js"></script>
 
 
 </body>
