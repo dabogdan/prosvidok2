@@ -104,5 +104,24 @@ $(document).ready(function () {
     });
 });
 
+//sections appear on scrolling
+const scrollAppear = el => {
+    el.style.transition = 'all 1s ease-in-out'
+    el.classList.add('gone')
+    window.addEventListener('scroll', () => {
+        let elPos = el.getBoundingClientRect().top;
+        let pos = window.innerHeight / 1.2
+        if(elPos < pos) {
+            el.classList.add('appear')
+            el.classList.remove('gone')
+        } else {
+            el.classList.remove('appear')
+            el.classList.add('gone')
+        }
+    })
+}
 
+document.querySelectorAll('.scroll').forEach(item => {
+    scrollAppear(item)
+})
 

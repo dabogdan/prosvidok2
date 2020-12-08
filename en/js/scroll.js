@@ -82,51 +82,23 @@ $(document).ready($.proxy(anchorScrolls, 'init'));
 })
 (window.document, window.history, window.location);
 
+//sections appear on scrolling
+const scrollAppear = el => {
+    el.style.transition = 'all 1s ease-in-out'
+    el.classList.add('gone')
+    window.addEventListener('scroll', () => {
+        let elPos = el.getBoundingClientRect().top;
+        let pos = window.innerHeight / 1.2
+        if(elPos < pos) {
+            el.classList.add('appear')
+            el.classList.remove('gone')
+        } else {
+            el.classList.remove('appear')
+            el.classList.add('gone')
+        }
+    })
+}
 
-// JUST IN CASE ABOVE FUN DOES NOT WORK - scroll js function
-//
-//
-// // JQuery scroll function
-//
-// $(document).ready(function () {
-// // scroll to Top button enable/disable
-//     $(window).scroll(function () {
-//         if ($(this).scrollTop() > 250) {
-//             $('.scrollTop').fadeIn(500);
-//         } else {
-//             $('.scrollTop').fadeOut(500);
-//         }
-//     });
-// // scroll to top func
-//     $('.scrollTop').click(function (event) {
-//         event.preventDefault();
-//         $('html, body').animate({
-//             scrollTop: 0
-//         }, 300);
-//     });
-// // scroll to #victims
-//     $('.victims-link').click(function (event) {
-//         event.preventDefault();
-//         $('html, body').animate({
-//             scrollTop: $('#victims')[0].offsetTop - navbarHeight
-//         }, 300);
-//     });
-//     // scroll to #welcome
-//     $('.arrow').click(function (event) {
-//         event.preventDefault();
-//         $('html, body').animate({
-//             scrollTop: $('#welcome')[0].offsetTop - navbarHeight
-//         }, 300);
-//     });
-//
-// // scroll to #Crime-info
-//     $('.crime-info').click(function (event) {
-//         event.preventDefault();
-//         $('html, body').animate({
-//             scrollTop: $('#crime-info')[0].offsetTop - navbarHeight
-//         }, 300);
-//     });
-// });
-//
-
-
+document.querySelectorAll('.scroll').forEach(item => {
+    scrollAppear(item)
+})

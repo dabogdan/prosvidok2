@@ -194,6 +194,7 @@
     line-height: 1.15;
     z-index: 12;
 }
+
 .scrollTop:hover {
     background: #333;
     opacity: .95;
