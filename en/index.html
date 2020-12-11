@@ -27,7 +27,25 @@
 </head>
 
 <body>
-
+<!--cookie notice-->
+<div id="cookie" class="cookie">
+    <div class="cookies-close" onclick="agreeCookiesButton()">
+        Close [x]
+    </div>
+    <div class="cookies-notice">
+        We use cookies to make sure you can have the best experience on our website. If you continue to use this site we
+        assume that you will be happy with it.
+    </div>
+    <div class="cookies-buttons">
+    <span class="cookies-button" onclick="agreeCookiesButton()">
+        Agree
+    </span>
+        <span class="cookies-button-more">
+            <a href="./privacy-policy.html">Read more</a>
+        </span>
+    </div>
+</div>
+<script src="js/cookies.js"></script>
 <!-- scroll to the Top button -->
 
 <div class="scrollTop">^</div>
@@ -59,7 +77,7 @@
         <!-- language switcher -->
         <div class="lang-menu">
             <label class="lang_label" for="languages">Language:</label>
-            <select id="languages" name="languages"  onChange="window.location.href=this.value">
+            <select id="languages" name="languages" onChange="window.location.href=this.value">
                 <option value="../index.html">ua</option>
                 <option value="../ru/index.html">ru</option>
                 <option value="en" selected>en</option>
@@ -196,7 +214,8 @@
             <p class="blog-item grid">
                 The European Union Advisory Mission (EUAM) in Ukraine is implementing the Pilot the Project of the
                 Witness Support Volunteering Service together with the Shevchenkivskyi District Court of Lviv city, the
-                Lviv Regional Prosecutor’s Office and the Lviv State University of Internal Affairs, the Ivan Franko National
+                Lviv Regional Prosecutor’s Office and the Lviv State University of Internal Affairs, the Ivan Franko
+                National
                 University of Lviv. <br><br>
                 Volunteers offer personal assistance and practical advice to witnesses before the latter will testify in
                 the court. If the court, which summoned you to give evidence, has a witness support volunteers, you will
@@ -374,5 +393,8 @@
 
 <!--smooth scroll and navbar height offset-->
 <script src="js/scroll.js"></script>
+
+
+
 </body>
 </html>

@@ -28,6 +28,32 @@
 
 <body>
 
+<!--cookie notice-->
+<div id="cookie" class="cookie">
+    <div class="cookies-close" onclick="agreeCookiesButton()">
+        Закрити [x]
+    </div>
+    <div class="cookies-notice">
+        Ми використовуємо кукі (cookies), щоб ви отримували найкращий досвід на нашому вебсайті. Якщо ви продовжуєте
+        використовувати цей сайт, то для нас це означатиме, що ви приймаєте ці умови.
+
+        <!--        We use cookies to make-->
+        <!--        sure you can have the best experience on our website. If you continue to-->
+        <!--        use this site we-->
+        <!--        assume that you will be happy with it.-->
+    </div>
+    <div class="cookies-buttons">
+    <span class="cookies-button" onclick="agreeCookiesButton()">
+        Зрозуміло
+    </span>
+        <span class="cookies-button-more">
+            <a href="./privacy-policy.html">Дізнатися більше</a>
+        </span>
+    </div>
+</div>
+<script src="js/cookies.js"></script>
+
+
 <!-- scroll to the Top button -->
 
 <div class="scrollTop">^</div>
@@ -247,21 +273,22 @@
 
 <!-- form section -->
 
-<!--<section class="formsection scroll" onclick="mobMenuUncheck();">-->
-<!--    <div class="container">-->
-<!--        <div class="ask-legal-clinic">-->
-<!--            <h1>Контактна форма безкоштовної юридичної клініки</h1>-->
-<!--        </div>-->
-<!--        <form action="" class="grid">-->
-<!--            <div><input type="text" name='name' placeholder="Ваше ім'я..." required></div>-->
-<!--            <div><input type="text" name='name' placeholder="Ваш email ..."></div>-->
-<!--            <div><input type="text" name='name' placeholder="Ваш No телефону..."></div>-->
-<!--            <div>-->
-<!--                <button class="button">Надіслати Email</button>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</section>-->
+<section class="formsection scroll" onclick="mobMenuUncheck();">
+    <div class="container">
+        <div class="ask-legal-clinic">
+            <h1>Контактна форма безкоштовної юридичної клініки*</h1>
+        </div>
+        <form action="" class="grid">
+            <div><input type="text" name='name' placeholder="Ваше ім'я..." required></div>
+            <div><input type="text" name='name' placeholder="Ваш email ..."></div>
+            <div><input type="text" name='name' placeholder="Ваш No телефону..."></div>
+            <div>
+                <button class="button">Надіслати Email</button>
+            </div>
+        </form>
+        <div class="in-development">*в процесі розробки, демонструється як демо версія</div>
+    </div>
+</section>
 
 <!-- victim section -->
 <section class="section-welcome landing-section scroll" id="victims" onclick="mobMenuUncheck();">
@@ -331,7 +358,8 @@
                 особи. Зберігайте цей документ в надійному місці.
             </p>
             <p>
-                <a href="http://www.legalaid.gov.ua/" target="_blank" rel="nofollow noopener noreferrer">Посилання на Центр безоплатної правової допомоги.</a>
+                <a href="http://www.legalaid.gov.ua/" target="_blank" rel="nofollow noopener noreferrer">Посилання на
+                    Центр безоплатної правової допомоги.</a>
             </p>
 
         </div>
@@ -343,13 +371,20 @@
     <div class="container">
         <h2>Проект впроваджується за підтримки:</h2>
         <section class="customer-logos slider bootstrap">
-            <div class="slide"><img src="img/EUAM_logo.png"><a href="http://www.euam-ukraine.eu/">Консультативна Місія Європейського Союзу в Україні</a></div>
-            <div class="slide"><img src="img/Emblem_PPO.png"><a href="https://lviv.gp.gov.ua/ua/index.html">Львівська обласна прокуратура</a></div>
-            <div class="slide"><img src="img/UA_logo.png"> <a href="https://sh.lv.court.gov.ua/sud1328/">Шевченківський районний суд міста Львова</a></div>
-            <div class="slide"><img src="img/Logo_LVDUVS.png"><a href="http://www.lvduvs.edu.ua/">Львівський державний університет внутрішніх справ</a></div>
-            <div class="slide"><img src="img/lnu-logo.jpg"><a href="https://www.lnu.edu.ua/">Львівський національний університет імені Івана Франка</a></div>
-            <div class="slide"><img src="img/police.png"><a href="https://www.lnu.edu.ua/">Головне управління Національної поліції у Львівській області</a></div>
-            <div class="slide"><img src="img/DSA.jpg"><a href="https://lv.court.gov.ua/tu14/">Територіальне управління Державної судової адміністрації в Львівській області</a></div>
+            <div class="slide"><img src="img/EUAM_logo.png"><a href="http://www.euam-ukraine.eu/">Консультативна Місія
+                Європейського Союзу в Україні</a></div>
+            <div class="slide"><img src="img/Emblem_PPO.png"><a href="https://lviv.gp.gov.ua/ua/index.html">Львівська
+                обласна прокуратура</a></div>
+            <div class="slide"><img src="img/UA_logo.png"> <a href="https://sh.lv.court.gov.ua/sud1328/">Шевченківський
+                районний суд міста Львова</a></div>
+            <div class="slide"><img src="img/Logo_LVDUVS.png"><a href="http://www.lvduvs.edu.ua/">Львівський державний
+                університет внутрішніх справ</a></div>
+            <div class="slide"><img src="img/lnu-logo.jpg"><a href="https://www.lnu.edu.ua/">Львівський національний
+                університет імені Івана Франка</a></div>
+            <div class="slide"><img src="img/police.png"><a href="https://www.lnu.edu.ua/">Головне управління
+                Національної поліції у Львівській області</a></div>
+            <div class="slide"><img src="img/DSA.jpg"><a href="https://lv.court.gov.ua/tu14/">Територіальне управління
+                Державної судової адміністрації в Львівській області</a></div>
         </section>
     </div>
 </footer>
@@ -381,5 +416,7 @@
 
 <!--smooth scroll and navbar height offset-->
 <script src="js/scroll.js"></script>
+
+
 </body>
 </html>
