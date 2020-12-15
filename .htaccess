@@ -23,6 +23,8 @@ Deny from all
 </ifModule>
 
 //Rewrite from www and http to no www and https
+RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP_HOST} ^prosvidok\.info$ [OR]
