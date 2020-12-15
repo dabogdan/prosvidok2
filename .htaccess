@@ -4,6 +4,7 @@ Order Allow,Deny
 Deny from all
 </Files>
 
+#redirects
 RewriteEngine on
 
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
@@ -12,22 +13,98 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+#English old pages to new pages
+Redirect 301 /en/home/ https://prosvidok.info/en/index.html
+Redirect 301 /en/pilot-project/ https://prosvidok.info/en/index.html
+Redirect 301 /en/victims-of-crime/ https://prosvidok.info/en/index.html#victims
+Redirect 301 /en/i-have-witnessed-a-crime/ https://prosvidok.info/en/index.html#crime-info
+Redirect 301 /en/witness-protection/ https://prosvidok.info/en/witness-advice.html#protection
+Redirect 301 /en/rights-and-obligations-of-witnesses/ https://prosvidok.info/en/witness-advice.html
+Redirect 301 /en/compensation/ https://prosvidok.info/en/witness-advice.html#compensation
+Redirect 301 /en/advice/ https://prosvidok.info/en/witness-advice.html
+Redirect 301 /en/before-court/ https://prosvidok.info/en/in-court.html#before-court
+Redirect 301 /en/why-am-i-called-to-the-court/ https://prosvidok.info/en/in-court.html
+Redirect 301 /en/witness-summons/ https://prosvidok.info/en/witness-advice.html
+Redirect 301 /en/in-courtroom/ https://prosvidok.info/en/courtrooms.html
+Redirect 301 /en/after-trial/ https://prosvidok.info/en/in-court.html#after-trial
+Redirect 301 /en/who-is-involved/ https://prosvidok.info/en/witness-advice.html
+Redirect 301 /en/going-to-court/ https://prosvidok.info/en/in-court.html#trial-day
+Redirect 301 /en/the-day-of-the-trial/ https://prosvidok.info/en/in-court.html#trial-day
+Redirect 301 /en/i-need-legal-aid/ https://prosvidok.info/en/witness-advice.html#free-legal-aid
+
+#Ukrainian old pages to new pages
+Redirect 301 /home/ https://prosvidok.info/index.html
+Redirect 301 /pilotnyi-proekt/ https://prosvidok.info/index.html
+Redirect 301 /informatsia-poterpilym/ https://prosvidok.info/index.html#victims
+Redirect 301 /svidok-zlochuny/ https://prosvidok.info/index.html#crime-info
+Redirect 301 /zakhyst-svidkiv/ https://prosvidok.info/witness-advice.html#protection
+Redirect 301 /prava-ta-oboviasky-svidka/ https://prosvidok.info/witness-advice.html
+Redirect 301 /vidhkoduvannia-vytrat-svidku/ https://prosvidok.info/witness-advice.html#compensation
+Redirect 301 /porady-svidkam/ https://prosvidok.info/witness-advice.html
+Redirect 301 /pered-sudom/ https://prosvidok.info/in-court.html#before-court
+Redirect 301 /chomu-svidka-vyklykaiut-do-sudu/ https://prosvidok.info/in-court.html
+Redirect 301 /povistka-pro-vyklyk/ https://prosvidok.info/witness-advice.html
+Redirect 301 /v-zali-sudovoho-zasidannia/ https://prosvidok.info/courtrooms.html
+Redirect 301 /pislia-sudovoho-roshliadu/ https://prosvidok.info/in-court.html#after-trial
+Redirect 301 /uchasnyky-kryminalnoho-protsesu/ https://prosvidok.info/witness-advice.html
+Redirect 301 /v-sudi/ https://prosvidok.info/in-court.html#trial-day
+Redirect 301 /den-sudovoho-zasidannia/ https://prosvidok.info/in-court.html#trial-day
+Redirect 301 /pravova-dopomoha-svidku/ https://prosvidok.info/witness-advice.html#free-legal-aid
+
+#Russian old pages to new pages
+Redirect 301 /ru/main/ https://prosvidok.info/ru/index.html
+Redirect 301 /ru/pilotnii-proekt/ https://prosvidok.info/ru/index.html
+Redirect 301 /ru/informaciia-poterpevshim/ https://prosvidok.info/ru/index.html#victims
+Redirect 301 /ru/svidetel-prestupleniia/ https://prosvidok.info/ru/index.html#crime-info
+Redirect 301 /ru/zashita-svidetelei/ https://prosvidok.info/ru/witness-advice.html#protection
+Redirect 301 /ru/prava-i-obiazannosti-svidetelya/ https://prosvidok.info/ru/witness-advice.html
+Redirect 301 /ru/vozmeshenie-rashodov-svideteliam/ https://prosvidok.info/ru/witness-advice.html#compensation
+Redirect 301 /ru/sovety-svideteliam/ https://prosvidok.info/ru/witness-advice.html
+Redirect 301 /ru/pered-sudom/ https://prosvidok.info/ru/in-court.html#before-court
+Redirect 301 /ru/pochemu-svideteliz-vyzyvaiut-v-sud/ https://prosvidok.info/ru/in-court.html
+Redirect 301 /ru/povestka-o-vizove/ https://prosvidok.info/ru/witness-advice.html
+Redirect 301 /ru/v-zale-sudebnogo-zasedania/ https://prosvidok.info/ru/courtrooms.html
+Redirect 301 /ru/posle-sudebnogo-zasedania/ https://prosvidok.info/ru/in-court.html#after-trial
+Redirect 301 /ru/ychastniki-ugolovnogo-proizvodstva/ https://prosvidok.info/ru/witness-advice.html
+Redirect 301 /ru/v-sude/ https://prosvidok.info/ru/in-court.html#trial-day
+Redirect 301 /ru/den-sudebnogo-zasedaniia/ https://prosvidok.info/ru/in-court.html#trial-day
+Redirect 301 /ru/pravovaia-pomosh-svideteliu/ https://prosvidok.info/ru/witness-advice.html#free-legal-aid
+
+
+#cache
+
+# Fonts
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
+
 <ifModule mod_expires.c>
  ExpiresActive On
- #cash flash and images for 30 days
+ #cache flash and images for 30 days
+ ExpiresByType image/x-icon "access plus 30 days"
  ExpiresByType image/x-icon "access plus 30 days"
  ExpiresByType image/jpeg "access plus 30 days"
  ExpiresByType image/png "access plus 30 days"
  ExpiresByType application/x-shockwave-flash "access plus 30 days"
- #cash css, javascript and txt files for 30 days
+ #cache css, javascript and txt files for 30 days
  ExpiresByType text/css "access plus 30 days"
  ExpiresByType text/javascript "access plus 30 days"
  ExpiresByType application/javascript "access plus 30 days"
  ExpiresByType application/x-javascript "access plus 30 days"
- #cash html & htm files for 30 days
+ #cache html & htm files for 30 days
  ExpiresByType text/html "access plus 1 day"
- #cash xml files for 20 minutes
+ #cache xml files for 20 minutes
+ #cache fonts
  ExpiresByType application/xhtml+xml "access plus 20 minutes"
+ ExpiresByType application/x-font-ttf "access plus 1 year"
+ ExpiresByType application/x-font-opentype "access plus 1 year"
+ ExpiresByType application/x-font-woff "access plus 1 year"
+ ExpiresByType application/font-woff2  "access plus 1 month"
+ ExpiresByType image/svg+xml "access plus 1 year"
+
 </ifModule>
 
 
