@@ -1,0 +1,39 @@
+## Secure htaccess file ##
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<ifModule mod_expires.c>
+ ExpiresActive On
+ #cash flash and images for 30 days
+ ExpiresByType image/x-icon "access plus 30 days"
+ ExpiresByType image/jpeg "access plus 30 days"
+ ExpiresByType image/png "access plus 30 days"
+ ExpiresByType application/x-shockwave-flash "access plus 30 days"
+ #cash css, javascript and txt files for 30 days
+ ExpiresByType text/css "access plus 30 days"
+ ExpiresByType text/javascript "access plus 30 days"
+ ExpiresByType application/javascript "access plus 30 days"
+ ExpiresByType application/x-javascript "access plus 30 days"
+ #cash html & htm files for 30 days
+ ExpiresByType text/html "access plus 1 day"
+ #cash xml files for 20 minutes
+ ExpiresByType application/xhtml+xml "access plus 20 minutes"
+</ifModule>
+
+//Rewrite from www and http to no www and https
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^prosvidok\.info$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.prosvidok\.info
+RewriteRule .* https://prosvidok.info%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTPS} =on
+RewriteCond %{HTTP_HOST} ^www\.prosvidok\.info$
+RewriteRule .* https://prosvidok.info%{REQUEST_URI} [R=301,L]
+
+
+ErrorDocument 404 https://prosvidok.info/error_404.html
+
+
