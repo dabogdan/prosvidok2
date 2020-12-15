@@ -4,6 +4,14 @@ Order Allow,Deny
 Deny from all
 </Files>
 
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 <ifModule mod_expires.c>
  ExpiresActive On
  #cash flash and images for 30 days
@@ -21,19 +29,6 @@ Deny from all
  #cash xml files for 20 minutes
  ExpiresByType application/xhtml+xml "access plus 20 minutes"
 </ifModule>
-
-//Rewrite from www and http to no www and https
-RewriteEngine On RewriteBase / RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP_HOST} ^prosvidok\.info$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.prosvidok\.info
-RewriteRule .* https://prosvidok.info%{REQUEST_URI} [R=301,L]
-
-RewriteCond %{HTTPS} =on
-RewriteCond %{HTTP_HOST} ^www\.prosvidok\.info$
-RewriteRule .* https://prosvidok.info%{REQUEST_URI} [R=301,L]
 
 
 ErrorDocument 404 https://prosvidok.info/error_404.html

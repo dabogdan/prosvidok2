@@ -1,105 +1,105 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://prosvidok.info/</loc>
+        <loc>https://prosvidok.info/</loc>
         <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://prosvidok.info/"/>
+                href="https://prosvidok.info/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://prosvidok.info/ru/"/>
+                href="https://prosvidok.info/ru/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://prosvidok.info/en/"/>
+                href="https://prosvidok.info/en/"/>
         <lastmod>2020-12-11T18:27:58+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://prosvidok.info/privacy-policy.html</loc>
+        <loc>https://prosvidok.info/privacy-policy.html</loc>
         <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://prosvidok.info/privacy-policy.html"/>
+                href="https://prosvidok.info/privacy-policy.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://prosvidok.info/ru/privacy-policy.html"/>
+                href="https://prosvidok.info/ru/privacy-policy.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://prosvidok.info/en/privacy-policy.html"/>
+                href="https://prosvidok.info/en/privacy-policy.html"/>
         <lastmod>2020-12-11T18:27:59+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://prosvidok.info/index.html</loc>
+        <loc>https://prosvidok.info/index.html</loc>
         <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://prosvidok.info/index.html"/>
+                href="https://prosvidok.info/index.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://prosvidok.info/ru/index.html"/>
+                href="https://prosvidok.info/ru/index.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://prosvidok.info/en/index.html"/>
+                href="https://prosvidok.info/en/index.html"/>
         <lastmod>2020-12-11T18:28:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://prosvidok.info/witness-advice.html</loc>
+        <loc>https://prosvidok.info/witness-advice.html</loc>
         <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://prosvidok.info/witness-advice.html"/>
+                href="https://prosvidok.info/witness-advice.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://prosvidok.info/ru/witness-advice.html"/>
+                href="https://prosvidok.info/ru/witness-advice.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://prosvidok.info/en/witness-advice.html"/>
+                href="https://prosvidok.info/en/witness-advice.html"/>
         <lastmod>2020-12-11T18:28:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://prosvidok.info/in-court.html</loc>
+        <loc>https://prosvidok.info/in-court.html</loc>
         <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://prosvidok.info/in-court.html"/>
+                href="https://prosvidok.info/in-court.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://prosvidok.info/ru/in-court.html"/>
+                href="https://prosvidok.info/ru/in-court.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://prosvidok.info/en/in-court.html"/>
+                href="https://prosvidok.info/en/in-court.html"/>
         <lastmod>2020-12-11T18:28:01+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://prosvidok.info/courtrooms.html</loc>
+        <loc>https://prosvidok.info/courtrooms.html</loc>
         <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://prosvidok.info/courtrooms.html"/>
+                href="https://prosvidok.info/courtrooms.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://prosvidok.info/ru/courtrooms.html"/>
+                href="https://prosvidok.info/ru/courtrooms.html"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://prosvidok.info/en/courtrooms.html"/>
+                href="https://prosvidok.info/en/courtrooms.html"/>
         <lastmod>2020-12-11T18:28:02+01:00</lastmod>
         <priority>1.0</priority>
     </url>
