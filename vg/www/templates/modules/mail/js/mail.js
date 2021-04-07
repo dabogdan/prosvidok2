@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var http = new XMLHttpRequest();
             http.open("POST", 'vg/www/templates/modules/mail/php/sendmail.php');
             http.onreadystatechange = function() {//Call a function when the state changes.
+                debugger;
                 if(http.readyState == 4 && http.status == 200) {
+
                     var res1 = JSON.parse(http.responseText);
                     if(res1.error==0){
                         $this.innerHTML = '<h2>'+res1.data+'</h2>';
