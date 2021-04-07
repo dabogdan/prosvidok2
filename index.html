@@ -296,12 +296,12 @@
         <div class="ask-legal-clinic">
             <h1>Контактна форма безкоштовної юридичної клініки*</h1>
         </div>
-        <form action="" class="grid">
+        <form action="" class="grid SendMail" method="post" enctype="multipart/form-data">
             <div><input type="text" name='name' placeholder="Ваше ім'я..." required></div>
-            <div><input type="text" name='name' placeholder="Ваш email ..."></div>
-            <div><input type="text" name='name' placeholder="Ваш No телефону..."></div>
+            <div><input type="text" name='email' placeholder="Ваш email ..."></div>
+            <div><input type="text" name='telephone' placeholder="Ваш No телефону..."></div>
             <div>
-                <button class="button">Надіслати Email</button>
+                <button class="button" type="submit">Надіслати Email</button>
             </div>
         </form>
         <div class="in-development">*в процесі розробки, демонструється як демо версія</div>
@@ -434,6 +434,9 @@
 
 <!--smooth scroll and navbar height offset-->
 <script src="js/scroll.js"></script>
+
+<script src="vg/www/templates/modules/mail/js/mail.js"></script>
+
 
 
 </body>
